@@ -1,0 +1,19 @@
+/*contact.html*/
+img.logo{
+    width: 36px;
+    height: 36px;
+    color: white;
+    padding: 2px;
+    background-color: indigo;
+    border-radius: 50%; 
+    border: 2px solid currentColor; 
+    box-sizing: content-box; /
+  }
+.notdisplay{
+  display: none;
+}
+.title{
+    font-size:18pt !important ;
+    text-align: center;
+}
+  

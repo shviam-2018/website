@@ -9,4 +9,6 @@ img.logo{
     border: 2px solid currentColor; 
     box-sizing: content-box; /
   }
-  
+.notdisplay{
+  display: none;
+}
