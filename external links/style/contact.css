@@ -12,8 +12,32 @@ img.logo{
 .notdisplay{
   display: none;
 }
-.title{
-    font-size:18pt !important ;
-    text-align: center;
-}
-  
+        /* Style the video element */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+
+        /* Style the message div */
+        .msg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 24px;
+        }
+        body{
+            background-image: url(/assets/bg.jpg);
+        }
+        .topbar{
+            background-color: white;
+        }
