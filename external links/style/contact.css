@@ -1,0 +1,43 @@
+/*contact.html*/
+img.logo{
+    width: 36px;
+    height: 36px;
+    color: white;
+    padding: 2px;
+    background-color: indigo;
+    border-radius: 50%; 
+    border: 2px solid currentColor; 
+    box-sizing: content-box; /
+  }
+.notdisplay{
+  display: none;
+}
+        /* Style the video element */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+
+        /* Style the message div */
+        .msg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 24px;
+        }
+        body{
+            background-image: url(/assets/bg.jpg);
+        }
+        .topbar{
+            background-color: white;
+        }
