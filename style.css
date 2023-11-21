@@ -9,6 +9,61 @@ img.logo{
     border: 2px solid currentColor; 
     box-sizing: content-box; /
   }
+  
 .notdisplay{
   display: none;
 }
+
+.hero-img{
+  object-fit: cover;
+  padding-bottom: 70px;;
+}
+
+body {
+  animation: autoscroll 3s ease-in-out forwards;
+  animation: autoscroll-reverse 1s ease-in-out forwards;
+}
+
+@keyframes autoscroll {
+  from {
+    transform: translateY(0%); 
+  }
+
+  to {
+    transform: translateY(3%); 
+  }
+}
+
+
+@keyframes autoscroll-reverse {
+  from {
+    transform: translateY(3%);
+  }
+
+  to {
+    transform: translateY(0%); 
+  }
+}
+
+.hero-text h1 {
+  position: absolute;
+  top: 38%;
+  right: 53%;
+  transform: translate(-50%, -50%);
+  color: blue;
+  text-align: center;
+  font-size: 35px;
+  padding: 5px;
+  
+}
+
+.hero-text span{
+  position: absolute;
+  top: 62%;
+  right: 32%;
+  transform: translate(-50%, -50%);
+  color: black;
+  text-align: center;
+  font-size: 24px;
+}
+
