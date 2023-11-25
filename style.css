@@ -1,4 +1,5 @@
 /* index.html */
+/*nav bar*/
 img.logo{
     width: 36px;
     height: 36px;
@@ -14,15 +15,7 @@ img.logo{
   display: none;
 }
 
-.hero-img{
-  object-fit: cover;
-  padding-bottom: 70px;;
-}
-
-body {
-  animation: autoscroll 3s ease-in-out forwards;
-  animation: autoscroll-reverse 1s ease-in-out forwards;
-}
+/*hero section*/
 
 @keyframes autoscroll {
   from {
@@ -45,25 +38,80 @@ body {
   }
 }
 
-.hero-text h1 {
-  position: absolute;
-  top: 38%;
-  right: 53%;
-  transform: translate(-50%, -50%);
-  color: blue;
-  text-align: center;
-  font-size: 35px;
-  padding: 5px;
-  
+
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Use vh units for full-height */
+  background-image: url('hero-image.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-.hero-text span{
-  position: absolute;
-  top: 62%;
-  right: 32%;
-  transform: translate(-50%, -50%);
-  color: black;
+.hero-img {
+  flex-grow: 1; /* Expand image to fill available space */
+  object-fit: cover;
+}
+
+.hero-text {
+  flex-shrink: 0; /* Prevent text from shrinking */
+  color: #fff;
+  position: relative;
   text-align: center;
-  font-size: 24px;
+  top:-360px;
+  right: 335px;
+  margin: 0 auto;
+  padding: 0 20px; /* Add some padding for better readability */
+}
+
+.hero-text h1 {
+  font-size: clamp(2rem, 5vw, 3rem); /* Use clamp() for responsive font size */
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+/*home page about me */
+.homeab-pf {
+  width: 350px;
+  height: 350px;
+  float: left;
+  margin-right: 20px;
+}
+
+.homeab-info {
+  float: left;
+  text-align: justify;
+  font-size: 2rem;
+}
+
+.homeab-info p{
+  top: 50px;
+font-size: large ;
+}
+
+.homeab-btm{
+  display: inline-block;
+  margin-right: 10px;
+  background: #339DFF;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 38px;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 170px;
+  text-align: center;
+}
+
+.homeab-btm:hover {
+  background: #fff;
+  color: #339DFF;
+  box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
 }
 
