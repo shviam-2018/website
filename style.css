@@ -76,22 +76,54 @@ img.logo{
 }
 
 /*home page about me */
-.homeab-pf {
-  width: 350px;
-  height: 350px;
-  float: left;
-  margin-right: 20px;
+
+.aboutme{
+width: 100%;
+padding: 78px 0px;
 }
 
-.homeab-info {
-  float: left;
-  text-align: justify;
-  font-size: 2rem;
+.aboutme img{
+  height: auto;
+  width: 420px;
 }
 
-.homeab-info p{
-  top: 50px;
-font-size: large ;
+.aboutme-info{
+  width: 550px;
+}
+
+.main{
+  width: 1130px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.aboutme-info h1{
+  color: black;
+  font-size: 80px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.aboutme-info h5{
+  color: black;
+  font-size: 25px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+span{
+  color: blue;
+}
+
+.aboutme-info p{
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 45px;
 }
 
 .homeab-btm{
