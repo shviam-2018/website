@@ -8,3 +8,16 @@ img.logo{
     border: 2px solid currentColor; 
     box-sizing: content-box; /
   }
+
+.overtext{
+  font-size: 2rem;
+  text-align: center;
+}
+
+.bwtlapl{
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  margin-left: 400px;
+  margin-top: 100px;
+}
