@@ -6,17 +6,5 @@ img.logo{
   background-color: indigo;
   border-radius: 50%; 
   border: 2px solid currentColor; 
-  box-sizing: content-box; /
-}
-
-.abme{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  image-resolution: from-image 300dpi;
-}
-
-body{
-  background-color: #fff;
-}
+  box-sizing: content-box; 
+ }
