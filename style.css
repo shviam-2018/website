@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+.wrapper a{
+  margin-right: 10px;
+}
+
 img.logo{
   width: 36px;
   height: 36px;
@@ -22,7 +26,7 @@ img.logo{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  text-align: left; /* Align text to the left in the hero section */
+  text-align: left; 
   color: #fff;
   padding: 200px 0;
 }
