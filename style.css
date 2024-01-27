@@ -1,97 +1,83 @@
-/* index.html */
-/*nav bar*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
 img.logo{
-    width: 36px;
-    height: 36px;
-    color: white;
-    padding: 2px;
-    background-color: indigo;
-    border-radius: 50%; 
-    border: 2px solid currentColor; 
-    box-sizing: content-box; /
-  }
-  
-.notdisplay{
-  display: none;
+  width: 36px;
+  height: 36px;
+  color: white;
+  padding: 2px;
+  background-color: indigo;
+  border-radius: 50%; 
+  border: 2px solid currentColor; 
+  box-sizing: content-box; /
 }
 
-/*hero section*/
-
-@keyframes autoscroll {
-  from {
-    transform: translateY(0%); 
-  }
-
-  to {
-    transform: translateY(3%); 
-  }
-}
-
-
-@keyframes autoscroll-reverse {
-  from {
-    transform: translateY(3%);
-  }
-
-  to {
-    transform: translateY(0%); 
-  }
-}
-
-
-
+/* General styles */
 .hero {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 100vh; /* Use vh units for full-height */
-  background-image: url('hero-image.jpg');
+  background-image: url('/assets/homepagemain.png');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-.hero-img {
-  flex-grow: 1; /* Expand image to fill available space */
-  object-fit: cover;
-}
-
-.hero-text {
-  flex-shrink: 0; /* Prevent text from shrinking */
+  text-align: left; /* Align text to the left in the hero section */
   color: #fff;
-  position: relative;
-  text-align: center;
-  top:-360px;
-  right: 335px;
-  margin: 0 auto;
-  padding: 0 20px; /* Add some padding for better readability */
+  padding: 200px 0;
 }
 
-.hero-text h1 {
-  font-size: clamp(2rem, 5vw, 3rem); /* Use clamp() for responsive font size */
-  margin-bottom: 0.5rem;
+.hero-content {
+  max-width: 800px;
+  margin-left: 50px; /* Adjusted margin to move content more to the left */
 }
 
-.hero-text p {
-  font-size: clamp(1rem, 3vw, 1.5rem);
+.hero-title {
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  padding-bottom: 20px;
 }
 
-/*home page about me */
-
-.aboutme{
-width: 100%;
-padding: 78px 0px;
+.hero-description {
+  font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
-.aboutme img{
+.hero-button {
+  background-color: #339DFF;
+  padding: 15px 30px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.5s ease;
+}
+
+.hero-button:hover {
+  background-color: #fff;
+  color: #339DFF;
+}
+
+/* About Me styles for big screens */
+.aboutme {
+  width: 100%;
+  padding: 78px 0px;
+}
+
+.aboutme img {
   height: auto;
   width: 420px;
 }
 
-.aboutme-info{
+.aboutme-info {
   width: 550px;
 }
 
-.main{
+.main {
   width: 1130px;
   max-width: 95%;
   margin: 0 auto;
@@ -100,14 +86,14 @@ padding: 78px 0px;
   justify-content: space-around;
 }
 
-.aboutme-info h1{
+.aboutme-info h1 {
   color: black;
   font-size: 80px;
   text-transform: capitalize;
   margin-bottom: 20px;
 }
 
-.aboutme-info h5{
+.aboutme-info h5 {
   color: black;
   font-size: 25px;
   text-transform: capitalize;
@@ -115,18 +101,18 @@ padding: 78px 0px;
   letter-spacing: 2px;
 }
 
-span{
+span {
   color: blue;
 }
 
-.aboutme-info p{
+.aboutme-info p {
   letter-spacing: 1px;
   line-height: 28px;
   font-size: 18px;
   margin-bottom: 45px;
 }
 
-.homeab-btm{
+.homeab-btm {
   display: inline-block;
   margin-right: 10px;
   background: #339DFF;
@@ -147,3 +133,51 @@ span{
   box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
 }
 
+/* Media Queries for smaller screens */
+@media only screen and (max-width: 768px) {
+  .hero {
+    padding: 100px 0;
+  }
+
+  .hero-title {
+    font-size: 2em;
+  }
+
+  .hero-description {
+    font-size: 1.2em;
+  }
+
+  .hero-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  .aboutme img {
+    width: 100%;
+    max-width: none;
+    order: -1; /* Move the image to the top */
+  }
+
+  .aboutme-info {
+    max-width: 100%;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .aboutme-info h1 {
+    font-size: 2em;
+  }
+
+  .aboutme-info h5 {
+    font-size: 1em;
+  }
+
+  .aboutme-info p {
+    font-size: 0.9em;
+  }
+
+  .homeab-btm {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
