@@ -8,3 +8,83 @@ img.logo{
   border: 2px solid currentColor; 
   box-sizing: content-box; 
  }
+ body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #E2E2E2;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+h1, h2 {
+  color: #001F5A;
+}
+
+p {
+  color: #666666;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.info p {
+  margin: 5px 0;
+}
+
+.tech-stack, .learning, .languages {
+  margin-top: 15px;
+}
+
+h3 {
+  border-bottom: 2px solid #001F5A;
+  padding-bottom: 5px;
+  color: #001F5A;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.skills {
+  margin-top: 15px;
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.skills li {
+  background-color: #0039AC;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+}
