@@ -8,7 +8,8 @@ img.logo{
   border: 2px solid currentColor; 
   box-sizing: content-box; 
  }
- body {
+
+/*body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   margin: 0;
@@ -28,7 +29,7 @@ img.logo{
 header {
   text-align: center;
   padding-bottom: 20px;
-}
+}*/
 
 h1, h2 {
   color: #001F5A;
