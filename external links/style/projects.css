@@ -12,3 +12,7 @@ img.logo{
 .notdisplay{
   display: none;
 }
+.horizontal-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+}
