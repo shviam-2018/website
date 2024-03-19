@@ -140,49 +140,61 @@ span {
 
 /* Media Queries for smaller screens */
 @media only screen and (max-width: 768px) {
+  /* Adjust hero padding */
   .hero {
     padding: 100px 0;
   }
 
+  /* Adjust hero title font size */
   .hero-title {
     font-size: 2em;
   }
 
+  /* Adjust hero description font size */
   .hero-description {
     font-size: 1.2em;
+    margin-bottom: 30px; /* Increase margin */
   }
 
+  /* Adjust hero button padding and font size */
   .hero-button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 1em;
   }
 
+  /* Make the image in about me section full width */
   .aboutme img {
     width: 100%;
     max-width: none;
-    order: -1; /* Move the image to the top */
+    margin-bottom: 20px; /* Add margin to the bottom */
   }
 
+  /* Adjust about me info max width and text alignment */
   .aboutme-info {
     max-width: 100%;
-    margin: 20px auto;
+    margin: 0 auto;
     text-align: center;
   }
 
+  /* Adjust about me info heading font size */
   .aboutme-info h1 {
-    font-size: 2em;
+    font-size: 2.5em; /* Increase font size */
   }
 
+  /* Adjust about me info subheading font size */
   .aboutme-info h5 {
-    font-size: 1em;
+    font-size: 1.5em; /* Increase font size */
   }
 
+  /* Adjust about me info paragraph font size and line height */
   .aboutme-info p {
-    font-size: 0.9em;
+    font-size: 1em; /* Increase font size */
+    line-height: 1.6; /* Increase line height */
   }
 
+  /* Adjust home about button padding and font size */
   .homeab-btm {
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 1em;
   }
 }
