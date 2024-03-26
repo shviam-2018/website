@@ -1,38 +1,48 @@
+/* Improved CSS Styles */
+
+/* Logo Styles */
 img.logo {
-  width: 36px;
-  height: 36px;
-  color: white;
-  padding: 2px;
-  background-color: indigo;
-  border-radius: 50%; 
-  border: 2px solid currentColor; 
-  box-sizing: content-box; 
+  width: 48px; /* Increased size for better visibility */
+  height: 48px; /* Increased size for better visibility */
+  padding: 4px; /* Increased padding for better spacing */
+  background-color: #4b0082; /* Changed to a darker shade of purple for better contrast */
+  border-radius: 50%;
+  border: 2px solid #4b0082; /* Matched border color with background color for consistency */
+  box-sizing: content-box;
 }
 
+/* Body Styles */
 body {
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif; /* Changed font-family to 'Poppins' for a modern look */
 }
 
+/* Container Styles */
 .container {
-  max-width: 800px;
+  max-width: 900px; /* Increased max-width for better readability */
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px; /* Increased padding for better spacing */
+  background-color: #f4f4f4; /* Added background color for better contrast */
+  border-radius: 10px; /* Added border radius for a softer appearance */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box-shadow for depth and dimension */
 }
 
+/* Heading Styles */
 h1, h2 {
   color: #0366d6;
 }
 
+/* List Styles */
 ul {
   list-style: none;
   padding: 0;
 }
 
+/* List Item Styles */
 li {
-  margin-bottom: 10px;
+  margin-bottom: 15px; /* Increased margin-bottom for better separation between list items */
 }
 
+/* Section Styles */
 section:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 40px; /* Increased margin-bottom for better separation between sections */
 }
-
