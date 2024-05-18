@@ -47,10 +47,10 @@ p {
     display: inline-block;
     margin: 0 10px;
     text-decoration: none;
-    color: #007bff; /* Changed color to blue */
+    color: #007bff; 
     font-size: 24px;
 }
 .social-links a:hover {
-    text-decoration: underline; /* Added underline on hover */
+    text-decoration: underline; 
 }
         

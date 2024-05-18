@@ -2,28 +2,28 @@
 
 /* Logo Styles */
 img.logo {
-  width: 48px; /* Increased size for better visibility */
-  height: 48px; /* Increased size for better visibility */
-  padding: 4px; /* Increased padding for better spacing */
-  background-color: #4b0082; /* Changed to a darker shade of purple for better contrast */
+  width: 48px; 
+  height: 48px; 
+  padding: 4px; 
+  background-color: #4b0082; 
   border-radius: 50%;
-  border: 2px solid #4b0082; /* Matched border color with background color for consistency */
+  border: 2px solid #4b0082; 
   box-sizing: content-box;
 }
 
 /* Body Styles */
 body {
-  font-family: 'Poppins', sans-serif; /* Changed font-family to 'Poppins' for a modern look */
+  font-family: 'Poppins', sans-serif; 
 }
 
 /* Container Styles */
 .container {
-  max-width: 900px; /* Increased max-width for better readability */
+  max-width: 900px; 
   margin: 0 auto;
-  padding: 40px; /* Increased padding for better spacing */
-  background-color: #f4f4f4; /* Added background color for better contrast */
-  border-radius: 10px; /* Added border radius for a softer appearance */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box-shadow for depth and dimension */
+  padding: 40px; 
+  background-color: #f4f4f4; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 /* Heading Styles */
@@ -39,10 +39,10 @@ ul {
 
 /* List Item Styles */
 li {
-  margin-bottom: 15px; /* Increased margin-bottom for better separation between list items */
+  margin-bottom: 15px; 
 }
 
 /* Section Styles */
 section:not(:last-child) {
-  margin-bottom: 40px; /* Increased margin-bottom for better separation between sections */
+  margin-bottom: 40px; 
 }
