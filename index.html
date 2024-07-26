@@ -9,54 +9,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NightDev</title>
-  <link rel="icon" href="assets/NightDev4l-logos.jpeg" type="image/icon type">
+  <link rel="icon" href="assets/NightDev4l-logos.jpeg" type="image/icon type" class="web-icon">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('show');
+    }
+  </script>
 </head>
 <body>
-  <header class="text-gray-600 body-font">
-      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <img src="/assets/NightDev4l-logos.jpeg" alt="" class="logo">
-          <h1 class="ml-3 text-xl">NightDev</h1>
-        </a>
-        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a class="mr-5 hover:text-gray-900" href="/index.html">home page</a>
-          <a class="mr-5 hover:text-gray-900" href="/external links/about-me.html">About Me</a>
-          <a class="mr-5 hover:text-gray-900" href="/external links/contact.html">contact Me</a> 
-          <a class="mr-5 hover:text-gray-900" href="/external links/projects.html">projects</a>
-          <a class="mr-5 hover:text-gray-900" href="/external links/article.html">articles</a>
-          </nav>
-          </svg>
-        </button>
-      </div>
-    </header>
-<body>
+  <header class="header">
+    <div class="container">
+      <a class="logo-brand" href="/">
+        <img src="assets/NightDev4l-logos.jpeg" alt="NightDev Logo" class="logo">
+        <h1 class="brand-name">NightDev</h1>
+      </a>
+      <nav class="nav">
+        <div class="nav-links" id="nav-menu">
+          <a class="nav-link" href="/index.html">Home Page</a>
+          <a class="nav-link" href="/external links/about-me.html">About Me</a>
+          <a class="nav-link" href="/external links/contact.html">Contact Me</a> 
+          <a class="nav-link" href="/external links/projects.html">Projects</a>
+          <a class="nav-link" href="/external links/article.html">Articles</a>
+        </div>
+        <div class="nav-toggle" onclick="toggleMenu()">
+          <span class="nav-icon"></span>
+          <span class="nav-icon"></span>
+          <span class="nav-icon"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
   <section class="hero">
     <div class="hero-content">
       <h1 class="hero-title">Welcome to <span>NightDev4l</span></h1>
-
-      <ul class="wrapper">
-<a class="btn btn-primary btn-lg btn-floating" style="background-color: transparent;" href="https://www.instagram.com/night.dev4l/" role="button" ><i class="fab fa-instagram fa-3x"></i
-></a>
-
-<a class="btn btn-primary" style="background-color: transparent;" href="https://www.linkedin.com/in/aaron-lacerda/" role="button"
-  ><i class="fab fa-linkedin-in fa-3x"></i
-></a>
-
-<a class="btn btn-primary" style="background-color: transparent;" href="https://github.com/shviam-2018" role="button"
-  ><i class="fab fa-github fa-3x"></i
-></a>
-    </ul>
-    
+      <ul class="wrapper"> 
+      <a class="btn btn-primary btn-lg btn-floating" style="background-color: transparent;" href="https://www.instagram.com/night.dev4l/" role="button" ><i class="fab fa-instagram fa-3x"></i
+        ></a>
+        
+        <a class="btn btn-primary" style="background-color: transparent;" href="https://www.linkedin.com/in/aaron-lacerda/" role="button"
+          ><i class="fab fa-linkedin-in fa-3x"></i
+        ></a>
+        
+        <a class="btn btn-primary" style="background-color: transparent;" href="https://github.com/shviam-2018" role="button"
+          ><i class="fab fa-github fa-3x"></i
+        ></a>
+            </ul>
       <p class="hero-description">This is a space where I upload my projects and articles. It's also a great place to get to know me.</p>
       <a href="#aboutme" class="hero-button">About me</a>
-      </div>
+    </div>
   </section>
 
   <!-- About me section -->
   <section class="aboutme" id="aboutme">
     <div class="main">
-      <img src="/assets/profile picture.png" alt="Photo of the owner of this website">
+      <img src="assets/profile picture.png" alt="Photo of the owner of this website" class="profile-picture">
       <div class="aboutme-info">
         <h1>About Me</h1>
         <h5>Owner of <span>NightDev4l</span></h5>
@@ -76,5 +84,6 @@
     <div class="footer-bottom">
       &copy; NightDev4l / Aaron | All Rights Reserved | Designed by Aaron Lacerda | Website Content and Domain &copy; 2023 - 2024 nightdev4l
     </div>
+  </footer>
 </body>
 </html>
