@@ -10,31 +10,122 @@
   
 }
 
-img.logo{
+.web-icon {
+  border-radius: 20%;
+}
+
+
+.header {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.logo-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.logo {
   width: 36px;
   height: 36px;
   color: white;
   padding: 2px;
   background-color: indigo;
-  border-radius: 50%; 
-  border: 2px solid currentColor; 
-  box-sizing: content-box; /
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  box-sizing: content-box;
 }
 
-/* General styles */
+.brand-name {
+  margin-left: 10px;
+  font-size: 1.5em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #339DFF;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .show {
+    display: flex;
+  }
+}
+
+/* Hero section */
 .hero {
-  background-image: url('/assets/homepagemain.png');
+  background-image: url('assets/homepagemain.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  text-align: left; 
   color: #fff;
   padding: 200px 0;
 }
 
 .hero-content {
   max-width: 800px;
-  margin-left: 50px; /* Adjusted margin to move content more to the left */
+  margin-left: 50px;
 }
 
 .hero-title {
@@ -42,6 +133,10 @@ img.logo{
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
   padding-bottom: 20px;
+}
+
+span {
+  color: #339DFF;
 }
 
 .hero-description {
@@ -67,156 +162,140 @@ img.logo{
   color: #339DFF;
 }
 
-/* About Me styles for big screens */
+/* About me section */
 .aboutme {
-  width: 100%;
-  padding: 78px 0px;
-}
-
-.aboutme img {
-  height: auto;
-  width: 420px;
-}
-
-.aboutme-info {
-  width: 550px;
+  padding: 100px 0;
+  text-align: center;
+  background-color: #f9f9f9;
 }
 
 .main {
-  width: 1130px;
-  max-width: 95%;
-  margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
 }
 
-.aboutme-info h1 {
-  color: black;
-  font-size: 80px;
-  text-transform: capitalize;
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   margin-bottom: 20px;
 }
 
-.aboutme-info h5 {
-  color: black;
-  font-size: 25px;
-  text-transform: capitalize;
-  margin-bottom: 25px;
-  letter-spacing: 2px;
+.aboutme-info {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-span {
-  color: blue;
+.aboutme-info h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.aboutme-info h5 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
 .aboutme-info p {
-  letter-spacing: 1px;
-  line-height: 28px;
-  font-size: 18px;
-  margin-bottom: 45px;
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .homeab-btm {
-  display: inline-block;
-  margin-right: 10px;
-  background: #339DFF;
+  background-color: #339DFF;
   color: #fff;
+  padding: 12px 24px;
   text-decoration: none;
-  font-size: 13px;
-  line-height: 38px;
-  border-radius: 50px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  width: 170px;
-  text-align: center;
-}
-
-.homeab-btm:hover {
-  background: #fff;
-  color: #339DFF;
-  box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
-}
-
-.footer-content {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.footer-bottom {
-  background-color: #222;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-}
-
-.footer-button {
-  padding: 10px 20px;
-  color: blue;
   border-radius: 50px;
   font-size: 1em;
-  font-weight: bold;
-  border: none;
   transition: background-color 0.5s ease;
 }
 
-/* Media Queries for smaller screens */
+.homeab-btm:hover {
+  background-color: #fff;
+  color: #339DFF;
+  border: 1px solid #339DFF;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.footer-content p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.footer-button {
+  background-color: #339DFF;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.5s ease;
+}
+
+.footer-button:hover {
+  background-color: #fff;
+  color: #339DFF;
+  border: 1px solid #339DFF;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+
+/* Responsive styles */
 @media only screen and (max-width: 768px) {
-  /* Adjust hero padding */
   .hero {
     padding: 100px 0;
   }
 
-  /* Adjust hero title font size */
   .hero-title {
     font-size: 2em;
   }
 
-  /* Adjust hero description font size */
   .hero-description {
     font-size: 1.2em;
-    margin-bottom: 30px; /* Increase margin */
+    margin-bottom: 30px;
   }
 
-  /* Adjust hero button padding and font size */
   .hero-button {
     padding: 12px 24px;
     font-size: 1em;
   }
 
-  /* Make the image in about me section full width */
-  .aboutme img {
-    width: 100%;
-    max-width: none;
-    margin-bottom: 20px; /* Add margin to the bottom */
+  .profile-picture {
+    width: 150px;
+    height: inherit;
+    margin-bottom: 100px;
   }
 
-  /* Adjust about me info max width and text alignment */
-  .aboutme-info {
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  /* Adjust about me info heading font size */
   .aboutme-info h1 {
-    font-size: 2.5em; /* Increase font size */
+    font-size: 2em;
   }
 
-  /* Adjust about me info subheading font size */
   .aboutme-info h5 {
-    font-size: 1.5em; /* Increase font size */
+    font-size: 1.2em;
   }
 
-  /* Adjust about me info paragraph font size and line height */
   .aboutme-info p {
-    font-size: 1em; /* Increase font size */
-    line-height: 1.6; /* Increase line height */
+    font-size: 1em;
   }
 
-  /* Adjust home about button padding and font size */
   .homeab-btm {
     padding: 12px 24px;
     font-size: 1em;
