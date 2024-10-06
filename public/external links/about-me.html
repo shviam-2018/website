@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="/external links/style/AB.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact Me!</title>
-    <link rel="icon" href="/assets/NightDev4l-logos.jpeg" type="image/icon type">
+  <link rel="stylesheet" href="style/AB.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nightdev4l's portfolio</title>
+  <link rel="icon" href="/assets/NightDev4l-logos.jpeg" type="image/icon type" class="web-icon">
+  <script src="script.js"></script>
 </head>
 <body>
-    <header class="text-gray-600 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <img src="/assets/NightDev4l-logos.jpeg" alt="" class="logo">
-            <span class="ml-3 text-xl">NightDev</span>
-          </a>
-          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a class="mr-5 hover:text-gray-900" href="/index.html">home page</a>
-            <a class="mr-5 hover:text-gray-900" href="/external links/about-me.html">About Me</a>
-            <a class="mr-5 hover:text-gray-900" href="/external links/contact.html">contact Me</a> 
-            <a class="mr-5 hover:text-gray-900" href="/external links/projects.html">projects</a>
-            <a class="mr-5 hover:text-gray-900" href="article.html">articles</a>
-            </nav>
-            </svg>
-          </button>
+  <header class="header">
+    <div class="container">
+      <a class="logo-brand" href="/">
+        <img src="/assets/NightDev4l-logos.jpeg" alt="raccoonPressLogo Logo" class="logo">
+        <tt class="brand-name">Nightdev4l</tt>
+      </a>
+      <nav class="nav">
+        <div class="nav-toggle" id="nav-toggle" onclick="toggleMenu()">
+          <!-- Hamburger icon -->
+          <span class="nav-icon"></span>
+          <span class="nav-icon"></span>
+          <span class="nav-icon"></span>
         </div>
-      </header>
-      <header class='masthead'>
-        <p class='masthead-intro'>Hi I'm</p>
-        <h1 class='masthead-heading'>Nightdev4l</h1>
-      </header>
-      <section class="introduction-section">
-          <h1>Introduction</h1>
-          <p>I am an 1st year IT student. i have been programming since i was 13 year old.</p>
-          <p>I love the internet, technology, and building beautiful and useflu things.</p>
-      </section>
-      <section class="location-section">
-          <h1>Where I'm From</h1>
-          <p>I'm originally from India. And i live in Oslo,Norway</p>
-      </section>
-      <section class="questions-section">
-          <h1>More About Me</h1>
+        <div class="nav-links" id="nav-menu">
+          <a class="nav-link" href="/index.html">Home Page</a>
+          <a class="nav-link" href="books.html">Books</a>
+          <a class="nav-link" href="about-me.html">About Me</a>
+          <a class="nav-link" href="video.html">Video</a>
+          <a class="nav-link" href="forAuthors.html">For Authors</a>
+          <a class="nav-link" href="contact.html">Contact Me</a> 
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!--main section-->
+  <div class="main-container">
+    <div class="main">
+      <img src="/assets/profile picture.png" alt="Photo of the owner of this website" class="profile-picture">
+      <div class="aboutme-info">
+        <h1>About Me</h1>
+        <h5>Owner of <span>NightDev4l</span></h5>
+        <p>I am an aspiring backend developer with a passion for coding. Programming is not just a profession to me; it is a hobby, a source of inspiration, and a field I am eager to contribute to in the future. I invite you to explore my portfolio and gain insights into my projects, articles, and other work that reflects my dedication to the field of development generally.</p>
+      </div>
+      
+      <!-- Q&A Section -->
+      <div class="qna-container">
+        <button class="qna-toggle-btn" onclick="toggleQA()">Q&A</button>
+        <div class="qna-content" id="qna-content" style="display:none;">
           <h2>What are your favorite hobbies?</h2>
           <p>My favorite hobby is building things on the internet like ecommerce sites and email marketing campaigns.</p>
           <h2>What's your dream job?</h2>
@@ -49,6 +55,9 @@
           <p>I live on a rural acreage, but I'm close to Ottawa and Montreal.</p>
           <h2>Why do you want to be a web developer?</h2>
           <p>Because programming is awesome and programming for the internet is even more awesome.</p>
-      </section>
+        </div>
+      </div>
+    </div>
+  </div>  
   </body>
 </html>
