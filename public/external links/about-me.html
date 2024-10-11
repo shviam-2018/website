@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <link rel="stylesheet" href="/external links/style/AB.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact Me!</title>
-    <link rel="icon" href="/assets/NightDev4l-logos.jpeg" type="image/icon type">
+  <link rel="stylesheet" href="style/AB.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nightdev4l's Portfolio</title>
+  <link rel="icon" href="/assets/NightDev4l-logos.jpeg" type="image/icon type" class="web-icon">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-    <header class="text-gray-600 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <img src="/assets/NightDev4l-logos.jpeg" alt="" class="logo">
-            <span class="ml-3 text-xl">NightDev</span>
-          </a>
-          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a class="mr-5 hover:text-gray-900" href="/index.html">home page</a>
-            <a class="mr-5 hover:text-gray-900" href="/external links/about-me.html">About Me</a>
-            <a class="mr-5 hover:text-gray-900" href="/external links/contact.html">contact Me</a> 
-            <a class="mr-5 hover:text-gray-900" href="/external links/projects.html">projects</a>
-            <a class="mr-5 hover:text-gray-900" href="article.html">articles</a>
-            </nav>
-            </svg>
-          </button>
+  <header class="header">
+    <div class="container">
+      <a class="logo-brand" href="/">
+        <img src="/assets/NightDev4l-logos.jpeg" alt="RaccoonPress Logo" class="logo">
+        <tt class="brand-name">Nightdev4l</tt>
+      </a>
+      <nav class="nav">
+        <div class="nav-toggle" id="nav-toggle" onclick="toggleMenu()">
+          <!-- Hamburger icon -->
+          <span class="nav-icon"></span>
+          <span class="nav-icon"></span>
+          <span class="nav-icon"></span>
         </div>
-      </header>
-      <header class='masthead'>
-        <p class='masthead-intro'>Hi I'm</p>
-        <h1 class='masthead-heading'>Nightdev4l</h1>
-      </header>
-      <section class="introduction-section">
-          <h1>Introduction</h1>
-          <p>I am an 1st year IT student. i have been programming since i was 13 year old.</p>
-          <p>I love the internet, technology, and building beautiful and useflu things.</p>
-      </section>
-      <section class="location-section">
-          <h1>Where I'm From</h1>
-          <p>I'm originally from India. And i live in Oslo,Norway</p>
-      </section>
-      <section class="questions-section">
-          <h1>More About Me</h1>
+        <div class="nav-links" id="nav-menu">
+          <a class="nav-link" href="/index.html">Home Page</a>
+          <a class="nav-link" href="/external links/about-me.html">About Me</a>
+          <a class="nav-link" href="/external links/contact.html">Contact Me</a>
+          <a class="nav-link" href="/external links/projects.html">Projects</a>
+          <a class="nav-link" href="/external links/article.html">Articles</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main section -->
+  <div class="main-container">
+    <div class="main">
+      <img src="/assets/profile picture.png" alt="Photo of the owner of this website" class="profile-picture">
+      <div class="aboutme-info">
+        <h1>About Me</h1>
+        <h5>Owner of <span>NightDev4l</span></h5>
+        <p>I am an aspiring backend developer with a passion for coding. Programming is not just a profession to me; it is a hobby, a source of inspiration, and a field I am eager to contribute to in the future. I invite you to explore my portfolio and gain insights into my projects, articles, and other work that reflects my dedication to the field of development generally.</p>
+      </div>
+
+      <!-- Q&A Section -->
+      <div class="dropDowenContainer">
+        <button class="dropDowenToggleBtn" onclick="toggleQA('qaContent')">Q&A</button>
+        <div class="dropDowenContent" id="qaContent" style="display: none;">
           <h2>What are your favorite hobbies?</h2>
           <p>My favorite hobby is building things on the internet like ecommerce sites and email marketing campaigns.</p>
           <h2>What's your dream job?</h2>
@@ -49,6 +57,40 @@
           <p>I live on a rural acreage, but I'm close to Ottawa and Montreal.</p>
           <h2>Why do you want to be a web developer?</h2>
           <p>Because programming is awesome and programming for the internet is even more awesome.</p>
-      </section>
-  </body>
+        </div>
+      </div>
+
+      <!-- Certificates Section -->
+      <div class="dropDowenContainer">
+        <button class="dropDowenToggleBtn" onclick="toggleQA('certContent')">Certificates</button>
+        <div class="dropDowenContent" id="certContent" style="display: none;">
+          <h2>Responsive Web Design</h2>
+          <p>Acquired on freecodecamp.org on: 13/04/2024</p>
+          <a href="https://www.freecodecamp.org/certification/nightdev4l/responsive-web-design" target="_blank"><button>See Certification</button></a>
+          <h2>Python (Basic)</h2>
+          <p>Acquired on HackerRank on: 13/04/2024</p>
+          <a href="https://www.hackerrank.com/certificates/452e92020662" target="_blank"><button>See Certification</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="actionButtons">
+    <a href="projects.html" class="footer-button">Projects</a>
+    <br>
+    <a href="contact.html" class="footer-button">Contact me</a>
+  </div>
+  <br>
+  <footer>
+    <div class="footer-content">
+      <h3>Get in touch with me</h3>
+      <p>Feel free to contact me if you have any questions or concerns. I am always available to help you.</p>
+      <a href="contact.html" class="footer-button">Contact me</a>
+    </div>
+    <div class="footer-bottom">
+      &copy; NightDev4l / Aaron | All Rights Reserved | Designed by Aaron Lacerda | Website Content and Domain &copy; 2023 - 2024 nightdev4l
+    </div>
+  </footer>
+</body>
+
 </html>

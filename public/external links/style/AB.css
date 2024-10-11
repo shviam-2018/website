@@ -1,165 +1,249 @@
-/* Improved CSS Styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif, Arial;
+  box-sizing: border-box;
+}
 
-/* Logo Styles */
-img.logo {
-  width: 48px; 
-  height: 48px; 
-  padding: 4px; 
-  background-color: #4b0082; 
+.header {
+  background-color: #339DFF;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.web-icon {
+  border-radius: 20%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  border: 2px solid #4b0082; 
-  box-sizing: content-box;
+}
+
+.brand-name {
+  margin-left: 10px;
+  font-size: 1.5em;
+  font-family: 'sans-serif';
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  font-family: 'sans-serif';
+  text-decoration: none;
+  color: #333;
+  font-size: 1em;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-toggle {
+  display: none; 
+  flex-direction: column;
+  justify-content: space-between; 
+  width: 30px; 
+  height: 20px; 
+  cursor: pointer;
+}
+
+.nav-icon {
+  width: 100%; 
+  height: 3px; 
+  background-color: #333; 
+  border-radius: 2px; 
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
 }
 
 body {
-  /* Typography Declarations */
-  color: #222222;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.aboutme-info {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.aboutme-info h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.aboutme-info h5 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.aboutme-info p {
   font-size: 1em;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.content-footer,
-.masthead-heading,
-.masthead-intro {
-text-align: center;
+.aboutme-info span {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #03b9f6;
 }
 
-.masthead {
-padding: 6em 0;
-background-image: url('https://i.imgur.com/yGmrlyg.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-border-top: solid 1em #FFCF33;
+.main-container{
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  margin-top: 25px;
 }
 
-.masthead-intro {
-  /* Layout Declarations */
-  margin-bottom: 0.1em;
-  /* Typography Declarations */
-  font-family: "Gentium Book Basic", Georgia, serif;
-  font-size: 2em;
+.dropDowenContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.masthead-heading {
-  /* Layout Declarations */
-  color: #5a55e1;
-  margin-top: -0.2em;
-  /* Typography Declarations */
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: bold;
-  font-size: 6em;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
+.dropDowenToggleBtn {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-.introduction-section,
-.location-section,
-.questions-section {
-  max-width: 38em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
+.dropDowenToggleBtn:hover {
+  background-color: #555;
 }
 
-.introduction-section > p,
-.location-section > p,
-.questions-section,
-.content-footer > p {
-  /* Typography Declarations */
-  font-weight: 300;
-  letter-spacing: 0.05em;
+.dropDowenContent {
+  margin-top: 20px;
+  text-align: center;
+  max-width: 600px;
 }
 
-.questions-section > h2 {
-  font-family: "Gentium Book Basic", Georgia, serif;
-  font-size: 1.2em;
-  font-weight: bold;
-  /* Layout */
-  margin: 2em 0 1em 0;
+.dropDowenContent h2 {
+  margin-top: 10px;
+  font-size: 20px;
 }
 
-section > h1 {
-  margin-top: 2em;
+.dropDowenContent p {
+  font-size: 16px;
+  margin-bottom: 15px;
 }
 
-.content-footer,
-.masthead-heading,
-.masthead-intro {
-text-align: center;
+.actionButtons{
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
 }
 
-.masthead {
-padding: 6em 0;
-background-image: url('/assets/bg.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-border-top: solid 1em#5a55e1;
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
 }
 
-.masthead-intro {
-margin-bottom: 0.1em;
-font-family: "Gentium Book Basic", Georgia, serif;
-  font-size: 2em;
+.footer-content h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
-.masthead-heading {
-margin-top: -0.2em;
-font-family: "Open Sans", "Helvetica Neue", sans-serif;
-font-weight: bold;
-font-size: 6em;
-letter-spacing: -0.02em;
-text-transform: uppercase;
-}
-.introduction > p,
-.location > p,
-.content-footer > p {
-  /* Typography Declarations */
-  font-weight: 300;
-  letter-spacing: 0.05em;
-}
-h2 {
-  /* Typography Declarations */
-  font-family: "Gentium Book Basic", Georgia, serif;
-  font-size: 1.2em;
-  font-weight: bold;
+.footer-content p {
+  font-size: 1em;
+  margin-bottom: 20px;
 }
 
-.introduction-section,
-.location-section,
-.questions-section {
-  max-width: 38em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
-}
-.content-footer {
-margin: 50px 0;
-padding: 20px 0;
-text-align: center;
-background-color: #73A8C2;
-text-decoration: none;
-}
-.social > li {
-display: inline-block;
-margin: 0 5px;
-}
-.content-footer > p {
-color: #F7EDE1;
-}
-a {
-  font-weight: bold;
+.footer-button {
+  background-color: #339DFF;
+  color: #fff;
+  padding: 10px 20px;
   text-decoration: none;
-  color: #6365f1;
+  border-radius: 50px;
+  transition: background-color 0.5s ease;
 }
 
-@media only screen and (max-width: 500px) {
-  .masthead {
-      padding: 3em 0;
-  }
-  .masthead-heading {
-      font-size: 3em;
-  }
-  .content-footer {
-      padding: 2em 2.5em;
+.footer-button:hover {
+  background-color: #fff;
+  color: #339DFF;
+  border: 1px solid #339DFF;
 }
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none; 
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-toggle {
+    display: flex; 
+  }
+
+  .nav-links.active {
+    display: flex; 
+  }
+
+  .nav-link:hover {
+    color: #333;
+  }
 }
