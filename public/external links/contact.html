@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="/external links/style/contact.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact Me!</title>
-    <link rel="icon" href="/assets/NightDev4l-logos.jpeg" type="image/icon type">
+  <link rel="stylesheet" href="style/contact.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nightdev4l's portfolio</title>
+  <link rel="icon" href="/assets/NightDev4l-logos.jpeg" type="image/icon type" class="web-icon">
+  <script src="script.js"></script>
 </head>
 <body>
-    <header class="text-gray-600 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <img src="/assets/NightDev4l-logos.jpeg" alt="" class="logo">
-            <span class="ml-3 text-xl">NightDev</span>
-          </a>
-          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a class="mr-5 hover:text-gray-900" href="/index.html">home page</a>
-            <a class="mr-5 hover:text-gray-900" href="/external links/about-me.html">About Me</a>
-            <a class="mr-5 hover:text-gray-900" href="/external links/contact.html">contact Me</a> 
-            <a class="mr-5 hover:text-gray-900" href="/external links/projects.html">projects</a>
-            <a class="mr-5 hover:text-gray-900" href="article.html">articles</a>
-            </nav>
-            </svg>
-          </button>
-        </div>
-      </header>
-      <!--main body-->
-</head>
-<body>
+  <header class="header">
     <div class="container">
-      <div class="social-links">
-        <div class="container">
-          <h1>Contact Us</h1>
-          <p>Feel free to reach out to us through any of the following methods:</p>
-          <div class="social-links">
-              <a href="https://github.com/shviam-2018" target="_blank">GitHub</a>
-              <a href="https://linkedin.com/in/aaronlacerda/" target="_blank">Linkden</a>
-              <a href="https://www.instagram.com/night.dev4l/" target="_blank">Instagram</a>
-              <a href="mailto:coder.develooper@gmail.com" target="_blank">Email</a>
-          </div>
-      </div>
+      <a class="logo-brand" href="/">
+        <img src="/assets/NightDev4l-logos.jpeg" alt="raccoonPressLogo Logo" class="logo">
+        <tt class="brand-name">Nightdev4l</tt>
+      </a>
+      <nav class="nav">
+        <div class="nav-toggle" id="nav-toggle" onclick="toggleMenu()">
+          <!-- Hamburger icon -->
+          <span class="nav-icon"></span>
+          <span class="nav-icon"></span>
+          <span class="nav-icon"></span>
+        </div>
+        <div class="nav-links" id="nav-menu">
+          <a class="nav-link" href="/index.html">Home Page</a>
+          <a class="nav-link" href="/external links/about-me.html">About Me</a>
+          <a class="nav-link" href="/external links/contact.html">Contact Me</a> 
+          <a class="nav-link" href="/external links/projects.html">Projects</a>
+          <a class="nav-link" href="/external links/article.html">Articles</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+<br>
+  <!-- Main section -->
+  <div class="main-container">
+    <div class="socialMediaContainer">
+      <h1>Contact me</h1>
+      <p>Use any on the following platforms to contact me.</p>
+      <div class="socialMediaLinks">
+        <a href="https://github.com/shviam-2018" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/aaronlacerda/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/night.dev4l/" target="_blank">Instagram</a>
+        <a href="mailto:coder.develooper@gmail.com" target="_blank">Email</a>
       </div>
     </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <h3>Get in touch with me</h3>
+      <p>Feel free to contact me if you have any questions or concerns. I am always available to help you.</p>
+      <a href="contact.html" class="footer-button">Contact me</a>
+    </div>
+    <div class="footer-bottom">
+      &copy; NightDev4l / Aaron | All Rights Reserved | Designed by Aaron Lacerda | Website Content and Domain &copy; 2023 - 2024 nightdev4l
+    </div>
+  </footer>
 </body>
 </html>
