@@ -3,12 +3,16 @@ function toggleMenu() {
     menu.classList.toggle('active'); 
 }
 
-function toggleQA() {
-    const qnaContent = document.getElementById("qna-content");
-    if (qnaContent.style.display === "none") {
-      qnaContent.style.display = "block";
-    } else {
-      qnaContent.style.display = "none";
-    }
+function toggleQA(contentId) {
+  const content = document.getElementById(contentId);
+  
+  // Toggle visibility
+  if (content.style.display === "none" || content.style.display === "") {
+    content.style.display = "block";
+  } else {
+    content.style.display = "none";
   }
+}
+
+  
   
