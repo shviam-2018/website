@@ -1,174 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="/external links/style/projects.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style/projects.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
-  <link rel="icon" href="/assets/NightDev4l-logos.jpeg" type="image/icon type">
+  <title>Nightdev4l's portfolio</title>
+  <link rel="icon" href="/assets/images/NightDev4l-logos.jpeg" type="image/icon type" class="web-icon">
+  <script src="script.js"></script>
 </head>
 <body>
-  <header class="text-gray-600 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-        <img src="/assets/NightDev4l-logos.jpeg" alt="" class="logo">
-        <span class="ml-3 text-xl">NightDev</span>
+  <header class="header">
+    <div class="container">
+      <a class="logo-brand" href="/">
+        <img src="/assets/images/NightDev4l-logos.jpeg" alt="raccoonPressLogo Logo" class="logo">
+        <tt class="brand-name">Nightdev4l</tt>
       </a>
-      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-        <a class="mr-5 hover:text-gray-900" href="/index.html">home Page</a>
-        <a class="mr-5 hover:text-gray-900" href="/external links/about-me.html">About Me</a>
-        <a class="mr-5 hover:text-gray-900" href="/external links/contact.html">Contact Me</a> 
-        <a class="mr-5 hover:text-gray-900" href="/external links/projects.html">Projects</a>
-        <a class="mr-5 hover:text-gray-900" href="/external links/article.html">Articles</a>
+      <nav class="nav">
+        <div class="nav-toggle" id="nav-toggle" onclick="toggleMenu()">
+          <!-- Hamburger icon -->
+          <span class="nav-icon"></span>
+          <span class="nav-icon"></span>
+          <span class="nav-icon"></span>
+        </div>
+        <div class="nav-links" id="nav-menu">
+          <a class="nav-link" href="/index.html">Home Page</a>
+          <a class="nav-link" href="/external links/about-me.html">About Me</a>
+          <a class="nav-link" href="/external links/contact.html">Contact Me</a> 
+          <a class="nav-link" href="/external links/projects.html">Projects</a>
+          <a class="nav-link" href="/external links/article.html">Articles</a>
+        </div>
       </nav>
     </div>
   </header>
 
-  <!-- Main Body -->
-  <section class="text-gray-600 body-font">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-col text-center w-full mb-20">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Projects Showcase</h1>
-        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Explore a variety of projects that demonstrate my coding skills and creativity. Fun Fact: I built this website as one of my projects!</p>
-      </div>
-      
-      <!-- Projects Section -->
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
-          <h2 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Featured Projects</h2>
-          <div class="flex flex-wrap -m-4">
-            <!-- Project: Emma -->
-<div class="lg:w-1/3 sm:w-1/2 p-4">
-  <div class="flex relative">
-    <img alt="photo of a robot" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/Eva.png">
-    <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"><a href="https://github.com/shviam-2018/Emma" target="_blank">Emma</a></h2>
-      <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Personal Assistant Project</h1>
-      <p class="leading-relaxed">Emma is a personal assistant project with advanced functionalities, designed to simplify daily tasks and enhance productivity.</p>
-    </div>
-  </div>
-</div>
-<!-- Project: Discord Bot -->
-<div class="lg:w-1/3 sm:w-1/2 p-4">
-  <div class="flex relative">
-    <img alt="Discord Bot" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/discord bot.webp">
-    <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"><a href="https://github.com/shviam-2018/discord-Bot" target="_blank">Discord Bot</a></h2>
-      <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Chat Bot for Discord</h1>
-      <p class="leading-relaxed">Doremon is a versatile Discord bot capable of opening websites, interacting with users, and automating various tasks within a Discord server.</p>
-    </div>
-  </div>
-</div>
-<!-- Project: Thea -->
-<div class="lg:w-1/3 sm:w-1/2 p-4">
-  <div class="flex relative">
-    <img alt="AI Therapist" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/Thea.png">
-    <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"><a href="https://github.com/shviam-2018/Thea" target="_blank">AI Therapist</a></h2>
-      <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Artificial Therapist</h1>
-      <p class="leading-relaxed">Thea is an AI therapist developed in Python, utilizing a custom dataset to provide empathetic and tailored interactions with users.</p>
-    </div>
-  </div>
-</div>
-<!-- Project: Ella -->
-<div class="lg:w-1/3 sm:w-1/2 p-4">
-  <div class="flex relative">
-    <img alt="AI Pocket Friend" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/Ella.png">
-    <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"><a href="https://github.com/shviam-2018/Ella" target="_blank">Ella</a></h2>
-      <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Artificial Friend / Companion</h1>
-      <p class="leading-relaxed">Ella is an AI companion app built with React Native and Expo, featuring a chat interface that uses machine learning models to generate responses based on user interactions.</p>
-    </div>
-  </div>
-</div>
-<!-- Project: The Knights of Flovora -->
-<div class="lg:w-1/3 sm:w-1/2 p-4">
-  <div class="flex relative">
-    <img alt="Mobile Game" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/TheKightsofFlovora.png">
-    <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"><a href="https://github.com/shviam-2018/TheKightsofFlovora" target="_blank">The Knights of Flovora</a></h2>
-      <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Mobile Game</h1>
-      <p class="leading-relaxed">An action-adventure RPG developed with Flutter, featuring immersive dungeon crawling and engaging combat mechanics.</p>
-    </div>
-  </div>
-</div>
-<!-- Project: Labyrinthian Quest -->
-<div class="lg:w-1/3 sm:w-1/2 p-4">
-  <div class="flex relative">
-    <img alt="Mobile Game" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/QL.png">
-    <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"><a href="https://github.com/shviam-2018/Labyrinthian-Quest/tree/main" target="_blank">Labyrinthian Quest</a></h2>
-      <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Group Project</h1>
-      <p class="leading-relaxed">A collaborative project completed within a week, featuring a maze exploration game with challenging puzzles and obstacles.</p>
-    </div>
-  </div>
-</div>
-<!-- Project: Mathematrix -->
-<div class="lg:w-1/3 sm:w-1/2 p-4">
-  <div class="flex relative">
-    <img alt="Math Learning Website" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/Mathematrix.png">
-    <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-      <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"><a href="https://github.com/shviam-2018/Mathematrix" target="_blank">Mathematrix</a></h2>
-      <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Educational Website</h1>
-      <p class="leading-relaxed">A website designed to teach and test multiplication tables from 2 to 10, making math learning engaging and interactive.</p>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-</section>
+  <!--intro text-->
+  <h1 class="info-panal">Project showcase</h1>
 
-<!-- Language Portfolio Section -->
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <h2 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Language Portfolios</h2>
-    <div class="flex flex-wrap -m-4">
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="C++ Projects" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/c++ portfolio.png">
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"><a href="https://github.com/shviam-2018/my-Cpp-protfolio" target="_blank">C++ Portfolio</a></h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">C++ Projects Collection</h1>
-            <p class="leading-relaxed">A compilation of C++ mini-projects created to understand and demonstrate the fundamentals of C++ programming.</p>
-          </div>
-        </div>
+  <!--projects section-->
+  <div class="projects-wrapper">
+    <div class="project-item">
+      <img src="/assets/images/Eva.png" alt="Eva - Robot Image" class="project-image">
+      <div class="project-details">
+        <h2 class="project-title"><a href="https://github.com/shviam-2018/Emma" target="_blank">Emma</a></h2>
+        <p class="project-description">Emma is a personal assistant project built with advanced algorithms to enhance daily productivity.</p>
       </div>
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="Python Projects" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/python.png">
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"><a href="https://github.com/shviam-2018/my-python-portfolio" target="_blank">Python Portfolio</a></h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Python Projects Collection</h1>
-            <p class="leading-relaxed">A comprehensive collection of my Python projects, showcasing a wide range of applications and programming techniques.</p>
-          </div>
-        </div>
-      </div>
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="C Projects" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/C portfolio.png">
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"><a href="https://github.com/shviam-2018/my-C-portfolio" target="_blank">C Portfolio</a></h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">C Projects Compilation</h1>
-            <p class="leading-relaxed">This repository contains a collection of both small and large projects developed in C, showcasing my proficiency in the language.</p>
-          </div>
-        </div>
-      </div>
-      <div class="lg:w-1/3 sm:w-1/2 p-4">
-        <div class="flex relative">
-          <img alt="Java Projects" class="absolute inset-0 w-full h-full object-cover object-center" src="/assets/java.png">
-          <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"><a href="https://github.com/shviam-2018/my-java-portfolio" target="_blank">Java Portfolio</a></h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Java Projects Compilation</h1>
-            <p class="leading-relaxed">A curated collection of Java projects, ranging from simple applications to more complex systems, demonstrating my Java programming skills.</p>
-          </div>
+    </div>
+    
+    <div class="projects-wrapper">
+      <div class="project-item">
+        <img src="/assets/images/discord bot.webp" alt="Eva - Robot Image" class="project-image">
+        <div class="project-details">
+          <h2 class="project-title"><a href="https://github.com/shviam-2018/discord-Bot" target="_blank">Discord Bot</a></h2>
+          <p class="project-description">Doremon is a versatile Discord bot capable of opening websites, interacting with users, and automating <br>various tasks within a Discord server.</p>
         </div>
       </div>
 
+      <div class="projects-wrapper">
+        <div class="project-item">
+          <img src="/assets/images/Thea.png" alt="Eva - Robot Image" class="project-image">
+          <div class="project-details">
+            <h2 class="project-title"><a href="https://github.com/shviam-2018/Thea" target="_blank">AI Therapist</a></h2>
+            <p class="project-description">Thea is an AI therapist developed in Python, utilizing a custom dataset to provide <br>empathetic and tailored interactions with users.</p>
           </div>
         </div>
-      </section>
+
+        <div class="projects-wrapper">
+          <div class="project-item">
+            <img src="/assets/images/Ella.png" alt="Eva - Robot Image" class="project-image">
+            <div class="project-details">
+              <h2 class="project-title"><a href="https://github.com/shviam-2018/Ella" target="_blank">Ella</a></h2>
+              <p class="project-description">Ella is an AI companion app built with React Native and Expo, featuring a chat interface <br> that uses machine learning models to generate responses based on user interactions.</p>
+            </div>
+          </div>
+
+          <div class="projects-wrapper">
+            <div class="project-item">
+              <img src="/assets/images/TheKightsofFlovora.png" alt="Eva - Robot Image" class="project-image">
+              <div class="project-details">
+                <h2 class="project-title"><a href="https://github.com/shviam-2018/TheKightsofFlovora" target="_blank">The Knights of Flovora</a></h2>
+                <p class="project-description">An action-adventure RPG developed with Flutter, featuring immersive dungeon crawling and <br> engaging combat mechanics.</p>
+              </div>
+            </div>
+
+            <div class="projects-wrapper">
+              <div class="project-item">
+                <img src="/assets/images/Mathematrix.png" alt="Eva - Robot Image" class="project-image">
+                <div class="project-details">
+                  <h2 class="project-title"><a href="https://github.com/shviam-2018/Mathematrix" target="_blank">Mathematrix</a></h2>
+                  <p class="project-description">A website designed to teach and test multiplication tables from 2 to 10, making math <br>learning engaging and interactive.</p>
+                </div>
+              </div>
+
+              <!--language specific project showcase-->
+              <h1 class="info-panal">language specific projects showcase</h1>
+
+              <div class="projects-wrapper">
+                <div class="project-item">
+                  <img src="/assets/images/c++ portfolio.png" alt="Eva - Robot Image" class="project-image">
+                  <div class="project-details">
+                    <h2 class="project-title"><a href="https://github.com/shviam-2018/my-Cpp-protfolio" target="_blank">C++ Portfolio</a></h2>
+                    <p class="project-description">A compilation of C++ mini-projects created to understand <br> and demonstrate the fundamentals of C++ programming.</p>
+                  </div>
+                </div>
+
+                <div class="projects-wrapper">
+                  <div class="project-item">
+                    <img src="/assets/images/python.png" alt="Eva - Robot Image" class="project-image">
+                    <div class="project-details">
+                      <h2 class="project-title"><a href="https://github.com/shviam-2018/my-python-portfolio" target="_blank">Python Portfolio</a></h2>
+                      <p class="project-description">A comprehensive collection of my Python projects, showcasing a wide <br> range of applications and programming techniques.</p>
+                    </div>
+                  </div>
+
+                  <div class="projects-wrapper">
+                    <div class="project-item">
+                      <img src="/assets/images/C portfolio.png" alt="Eva - Robot Image" class="project-image">
+                      <div class="project-details">
+                        <h2 class="project-title"><a href="https://github.com/shviam-2018/my-C-portfolio" target="_blank">C Portfolio</a></h2>
+                        <p class="project-description">This repository contains a collection of both small and <br> large projects developed in C, showcasing my proficiency in the language.</p>
+                      </div>
+                    </div>
+
+                    <div class="projects-wrapper">
+                      <div class="project-item">
+                        <img src="/assets/images/java.png" alt="Eva - Robot Image" class="project-image">
+                        <div class="project-details">
+                          <h2 class="project-title"><a href="https://github.com/shviam-2018/my-java-portfolio" target="_blank">Java Portfolio</a></h2>
+                          <p class="project-description">A curated collection of Java projects, ranging from simple applications to more complex systems, demonstrating my Java programming skills.</p>
+                        </div>
+                      </div>
+
+  <footer>
+    <div class="footer-content">
+      <h3>Get in touch with me</h3>
+      <p>Feel free to contact me if you have any questions or concerns. I am always available to help you.</p>
+      <a href="contact.html" class="footer-button">Contact me</a>
     </div>
-  </section>
-</body>
+    <div class="footer-bottom">
+      &copy; NightDev4l / Aaron | All Rights Reserved | Designed by Aaron Lacerda | Website Content and Domain &copy; 2023 - 2024 nightdev4l
+    </div>
+  </footer>
+  </body>
 </html>
