@@ -47,6 +47,38 @@
     </div>
   </div>
 
+<!--form-->
+<div class="form-container">
+  <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="form">
+      <input type="hidden" name="access_key" value="e679aadb-412f-4471-a16a-b47ca627fb5b">
+      
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" placeholder="Your name" class="input" required>
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="Your email" class="input" required>
+
+      <label for="message">Message:</label>
+      <textarea name="message" id="message" placeholder="Your message" class="input" required></textarea>
+
+      <button type="submit" class="submit-button">Submit</button>
+  </form>
+</div>
+
+<script>
+  // Auto-clear the form on submit
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+      setTimeout(function() {
+          document.getElementById("contactForm").reset();
+      }, 100); // Slight delay to allow form submission to process
+  });
+
+  // Auto-clear the form when leaving the page
+  window.addEventListener("beforeunload", function(event) {
+      document.getElementById("contactForm").reset();
+  });
+</script>
+
   <!-- Footer -->
   <footer>
     <div class="footer-content">

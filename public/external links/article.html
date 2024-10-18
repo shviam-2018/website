@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/external links/style/article.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NightDev</title>
-    <link rel="icon" href="/assets/NightDev4l-logos.jpeg" type="image/icon type">
+  <link rel="stylesheet" href="style/article.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nightdev4l's portfolio</title>
+  <link rel="icon" href="/assets/images/NightDev4l-logos.jpeg" type="image/icon type" class="web-icon">
+  <script src="script.js"></script>
 </head>
 <body>
-    <header class="text-gray-600 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <img src="/assets/NightDev4l-logos.jpeg" alt="" class="logo">
-            <span class="ml-3 text-xl">NightDev</span>
-          </a>
-          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a class="mr-5 hover:text-gray-900" href="/index.html">home page</a>
-            <a class="mr-5 hover:text-gray-900" href="/external links/about-me.html">About Me</a>
-            <a class="mr-5 hover:text-gray-900" href="/external links/contact.html">contact Me</a> 
-            <a class="mr-5 hover:text-gray-900" href="/external links/projects.html">projects</a>
-            <a class="mr-5 hover:text-gray-900" href="article.html">articles</a>
-            </nav>
-            </svg>
-          </button>
+  <header class="header">
+    <div class="container">
+      <a class="logo-brand" href="/">
+        <img src="/assets/images/NightDev4l-logos.jpeg" alt="raccoonPressLogo Logo" class="logo">
+        <tt class="brand-name">Nightdev4l</tt>
+      </a>
+      <nav class="nav">
+        <div class="nav-toggle" id="nav-toggle" onclick="toggleMenu()">
+          <!-- Hamburger icon -->
+          <span class="nav-icon"></span>
+          <span class="nav-icon"></span>
+          <span class="nav-icon"></span>
         </div>
-      </header>
-        <body>
-    <h5 class="overtext">artical</h5>
-    <div class="bwtlapl">
-      <a href="https://dev.to/nightdev/best-way-to-learn-a-programming-language-4223"><img src="/assets/artical/bwtlapl.png" alt="best wat to learn a programming language"></a>
+        <div class="nav-links" id="nav-menu">
+          <a class="nav-link" href="/index.html">Home Page</a>
+          <a class="nav-link" href="/external links/about-me.html">About Me</a>
+          <a class="nav-link" href="/external links/contact.html">Contact Me</a> 
+          <a class="nav-link" href="/external links/projects.html">Projects</a>
+          <a class="nav-link" href="/external links/article.html">Articles</a>
+        </div>
+      </nav>
     </div>
-    </body>
+  </header>
+  <!--main section-->
+  <h1 class="intro-title">article</h1>
+
+  <div class="article">
+    <a href="https://dev.to/nightdev/best-way-to-learn-a-programming-language-4223" target="_blank">
+      <img src="/assets/artical/bwtlapl.png" alt="img for article">
+    </a>
+  </div>
+  
+  <footer>
+    <div class="footer-content">
+      <h3>Get in touch with me</h3>
+      <p>Feel free to contact me if you have any questions or concerns. I am always available to help you.</p>
+      <a href="contact.html" class="footer-button">Contact me</a>
+    </div>
+    <div class="footer-bottom">
+      &copy; NightDev4l / Aaron | All Rights Reserved | Designed by Aaron Lacerda | Website Content and Domain &copy; 2023 - 2024 nightdev4l
+    </div>
+  </footer>
+  </body>
 </html>

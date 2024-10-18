@@ -14,5 +14,17 @@ function toggleQA(contentId) {
   }
 }
 
+// contact page
+// Auto-clear the form on submit
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  setTimeout(function() {
+      document.getElementById("contactForm").reset();
+  }, 100); // Slight delay to allow form submission to process
+});
+
+// Auto-clear the form when leaving the page
+window.addEventListener("beforeunload", function(event) {
+  document.getElementById("contactForm").reset();
+}); 
   
   
