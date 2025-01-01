@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .output-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 20px;
+            white-space: pre-wrap;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Email Generator</h1>
+    <form id="emailForm">
+        <label for="language">Språk/Language:</label>
+        <select id="language">
+            <option value="norsk" selected>Norsk</option>
+            <option value="english">English</option>
+        </select>
+
+        <label for="date">Dato:</label>
+        <input type="date" id="date" required>
+
+        <label for="companyName">Bedriftens navn / Company Name:</label>
+        <input type="text" id="companyName" required>
+
+        <label for="contactPerson">Kontaktperson (om mulig) / Contact Person:</label>
+        <input type="text" id="contactPerson">
+
+        <label for="companyAddress">Bedriftens adresse / Company Address:</label>
+        <input type="text" id="companyAddress" required>
+
+        <label for="postalCity">Postnummer og by / Postal Code & City:</label>
+        <input type="text" id="postalCity" required>
+
+        <button type="button" onclick="generateEmail()">Generate Email</button>
+    </form>
+
+    <h2>Generated Subject Line:</h2>
+    <div class="output-box" id="subjectOutput"></div>
+    <button onclick="copySubject()">Copy Subject Line</button>
+
+    <h2>Generated Email:</h2>
+    <div class="output-box" id="emailOutput"></div>
+    <button onclick="copyText()">Copy Email</button>
+</div>
+
+<script>
+    function formatDate(date) {
+        const d = new Date(date);
+        let day = ('0' + d.getDate()).slice(-2);
+        let month = ('0' + (d.getMonth() + 1)).slice(-2);
+        let year = d.getFullYear();
+        return `${day}/${month}/${year}`;
+    }
+
+    function generateEmail() {
+        const language = document.getElementById('language').value;
+        const date = document.getElementById('date').value;
+        const formattedDate = formatDate(date);
+        const companyName = document.getElementById('companyName').value;
+        const contactPerson = document.getElementById('contactPerson').value;
+        const companyAddress = document.getElementById('companyAddress').value;
+        const postalCity = document.getElementById('postalCity').value;
+        const companyField = 'IT'; // Set IT as default
+
+        // Norwegian Email and Subject
+        if (language === 'norsk') {
+            const contactGreeting = contactPerson ? `Kjære ${contactPerson},` : 'Kjære til den det måtte gjelde,';
+            const subjectLine = `Søknad om praksis hos ${companyName}`;
+            const emailBody = `
+Aaron Herman Lacerda
+Kolbotn, Nordre Follo, 1410
++47 973 92 263
+shviamjoshi@gmail.com
+LinkedIn Profile | GitHub Profile
+
+${formattedDate}
+${companyName}
+${contactPerson ? contactPerson : ''}
+${companyAddress}
+${postalCity}
+
+${contactGreeting}
+
+Jeg heter Aaron Herman Lacerda, og jeg er en førsteårselev ved Drømtorp videregående skole, hvor jeg studerer Informasjonsteknologi og Medieproduksjon. Jeg er på utkikk etter en praksisplass én dag i uken gjennom skoleåret, hvor jeg kan anvende og videreutvikle mine ferdigheter innen IT og medieproduksjon i et profesjonelt miljø. Jeg er spesielt interessert i ${companyField}, og tror mine ferdigheter og entusiasme kan bidra positivt hos dere.
+
+Gjennom min utdanning har jeg allerede fått et solid fundament i både tekniske og kreative ferdigheter. Jeg har erfaring med programmeringsspråk som Python, Java, samt webutvikling med HTML, CSS, og JavaScript. På min GitHub-profil kan dere finne flere prosjekter jeg har jobbet med, inkludert en stemmeassistent i Python som integrerer talegjenkjenning og tilpasningsdyktige kommandoer. I tillegg har jeg utviklet en nettside for å lære og øve på matte, noe som har gitt meg erfaring i full-stack webutvikling.
+
+Jeg er også svært motivert for å bidra med praktiske ferdigheter som problemløsning, teamarbeid og kommunikasjon. Jeg har tidligere hatt rollen som klasserepresentant, noe som har styrket mine evner til å jobbe i grupper og lede små prosjekter. Gjennom frivillig arbeid ved Kodeklubben Kolbotn har jeg også fått muligheten til å dele kunnskap med andre, noe som har vært svært givende.
+
+Jeg ser på praksisplassen som en verdifull mulighet til å lære og vokse innen ${companyField}, og jeg er ivrig etter å få en praktisk innsikt i bransjen. Jeg er fleksibel med arbeidstider, og jeg tror mitt engasjement og mine ferdigheter vil være et godt tillegg til teamet deres.
+
+Jeg håper å få muligheten til å presentere meg selv nærmere i et intervju. Vedlagt følger min CV for ytterligere informasjon om min bakgrunn og kompetanse.
+
+På forhånd takk for at dere tar dere tid til å vurdere min søknad. Jeg ser frem til å høre fra dere.
+
+Med vennlig hilsen,
+Aaron Herman Lacerda
+`;
+
+            document.getElementById('subjectOutput').innerText = subjectLine;
+            document.getElementById('emailOutput').innerText = emailBody;
+
+        } else { // English Email and Subject
+            const contactGreeting = contactPerson ? `Dear ${contactPerson},` : 'Dear Sir/Madam,';
+            const subjectLine = `Application for Internship at ${companyName}`;
+            const emailBody = `
+Aaron Herman Lacerda
+Kolbotn, Nordre Follo, 1410
++47 973 92 263
+shviamjoshi@gmail.com
+LinkedIn Profile | GitHub Profile
+
+${formattedDate}
+${companyName}
+${contactPerson ? contactPerson : ''}
+${companyAddress}
+${postalCity}
+
+${contactGreeting}
+
+My name is Aaron Herman Lacerda, and I am a first-year student at Drømtorp High School, where I study Information Technology and Media Production. I am looking for an internship one day a week throughout the school year, where I can apply and further develop my skills in IT and media production in a professional environment. I am particularly interested in the ${companyField} department and believe that my skills and enthusiasm can make a positive contribution to your team.
+
+During my education, I have already acquired a solid foundation in both technical and creative skills. I have experience with programming languages such as Python, Java, as well as web development with HTML, CSS, and JavaScript. On my GitHub profile, you can find several projects I have worked on, including a voice assistant in Python that integrates speech recognition and adaptable commands. I have also developed a website for learning and practicing math, which has given me experience in full-stack web development.
+
+I am also highly motivated to contribute with practical skills such as problem-solving, teamwork, and communication. I have previously held the role of class representative, which has strengthened my ability to work in groups and lead small projects. Through voluntary work at the Kolbotn Code Club, I have also had the opportunity to share knowledge with others, which has been highly rewarding.
+
+I see this internship as a valuable opportunity to learn and grow in the ${companyField} field, and I am eager to gain practical insight into the industry. I am flexible with working hours, and I believe my commitment and skills will be a valuable addition to your team.
+
+I hope to have the opportunity to present myself further in an interview. Attached is my CV for more information about my background and skills.
+
+Thank you in advance for considering my application. I look forward to hearing from you.
+
+Best regards,
+Aaron Herman Lacerda
+`;
+
+            document.getElementById('subjectOutput').innerText = subjectLine;
+            document.getElementById('emailOutput').innerText = emailBody;
+        }
+    }
+
+    // Function to copy the subject line
+    function copySubject() {
+        const subjectText = document.getElementById('subjectOutput').innerText;
+        navigator.clipboard.writeText(subjectText).then(() => {
+            alert('Subject line copied to clipboard!');
+        });
+    }
+
+    // Function to copy the email body
+    function copyText() {
+        const emailText = document.getElementById('emailOutput').innerText;
+        navigator.clipboard.writeText(emailText).then(() => {
+            alert('Email copied to clipboard!');
+        });
+    }
+</script>
+</body>
+</html>
