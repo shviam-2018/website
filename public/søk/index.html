@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Application Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .output-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 20px;
+            white-space: pre-wrap;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Internship Application Generator</h1>
+    <form id="applicationForm">
+        <label for="language">Language:</label>
+        <select id="language">
+            <option value="norsk" selected>Norwegian</option>
+            <option value="english">English</option>
+        </select>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" placeholder="E.g., ABC Technologies" required>
+
+        <label for="contactPerson">Contact Person:</label>
+        <input type="text" id="contactPerson" placeholder="E.g., John Doe">
+
+        <label for="companyAddress">Company Address:</label>
+        <input type="text" id="companyAddress" placeholder="E.g., 123 Main Street" required>
+
+        <label for="postalCity">Postal Code & City:</label>
+        <input type="text" id="postalCity" placeholder="E.g., 0150 Oslo" required>
+
+        <label for="department">Department/Field:</label>
+        <input type="text" id="department" placeholder="E.g., IT Department" required>
+
+        <button type="button" onclick="generateApplication()">Generate Application</button>
+    </form>
+
+    <h2>Generated Application:</h2>
+    <div class="output-box" id="applicationOutput"></div>
+    <button onclick="copyApplication()">Copy Application</button>
+</div>
+
+<script>
+    function formatDate(date) {
+        const d = new Date(date);
+        let day = ('0' + d.getDate()).slice(-2);
+        let month = ('0' + (d.getMonth() + 1)).slice(-2);
+        let year = d.getFullYear();
+        return `${day}/${month}/${year}`;
+    }
+
+    function generateApplication() {
+        const language = document.getElementById('language').value;
+        const date = document.getElementById('date').value;
+        const formattedDate = formatDate(date);
+        const companyName = document.getElementById('companyName').value;
+        const contactPerson = document.getElementById('contactPerson').value;
+        const companyAddress = document.getElementById('companyAddress').value;
+        const postalCity = document.getElementById('postalCity').value;
+        const department = document.getElementById('department').value;
+
+        let applicationText;
+
+        if (language === 'norsk') {
+            const greeting = contactPerson ? `Kjære ${contactPerson},` : 'Kjære til den det måtte gjelde,';
+            applicationText = `
+Aaron Herman Lacerda
+Kolbotn, Nordre Follo, 1410
++47 973 92 263
+shviamjoshi@gmail.com
+LinkedIn Profile | GitHub Profile
+
+${formattedDate}
+${companyName}
+${contactPerson || ''}
+${companyAddress}
+${postalCity}
+
+${greeting}
+
+Jeg heter Aaron Herman Lacerda, og jeg er en førsteårselev ved Drømtorp videregående skole, hvor jeg studerer Informasjonsteknologi og Medieproduksjon. Jeg er på utkikk etter en praksisplass én dag i uken gjennom skoleåret, hvor jeg kan anvende og videreutvikle mine ferdigheter innen IT og medieproduksjon i et profesjonelt miljø. Jeg er spesielt interessert i ${department}, og tror mine ferdigheter og entusiasme kan bidra positivt hos dere.
+
+Gjennom min utdanning har jeg allerede fått et solid fundament i både tekniske og kreative ferdigheter. Jeg har erfaring med programmeringsspråk som Python, Java, samt webutvikling med HTML, CSS, og JavaScript. På min GitHub-profil kan dere finne flere prosjekter jeg har jobbet med, inkludert en stemmeassistent i Python som integrerer talegjenkjenning og tilpasningsdyktige kommandoer. I tillegg har jeg utviklet en nettside for å lære og øve på matte, noe som har gitt meg erfaring i full-stack webutvikling.
+
+Jeg er også svært motivert for å bidra med praktiske ferdigheter som problemløsning, teamarbeid og kommunikasjon. Jeg har tidligere hatt rollen som klasserepresentant, noe som har styrket mine evner til å jobbe i grupper og lede små prosjekter. Gjennom frivillig arbeid ved Kodeklubben Kolbotn har jeg også fått muligheten til å dele kunnskap med andre, noe som har vært svært givende.
+
+Jeg ser på praksisplassen som en verdifull mulighet til å lære og vokse innen ${department}, og jeg er ivrig etter å få en praktisk innsikt i bransjen. Jeg er fleksibel med arbeidstider, og jeg tror mitt engasjement og mine ferdigheter vil være et godt tillegg til teamet deres.
+
+Jeg håper å få muligheten til å presentere meg selv nærmere i et intervju. Vedlagt følger min CV for ytterligere informasjon om min bakgrunn og kompetanse.
+
+På forhånd takk for at dere tar dere tid til å vurdere min søknad. Jeg ser frem til å høre fra dere.
+
+Med vennlig hilsen,
+Aaron Herman Lacerda
+`;
+        } else if (language === 'english') {
+            const greeting = contactPerson ? `Dear ${contactPerson},` : 'Dear Sir/Madam,';
+            applicationText = `
+Aaron Herman Lacerda
+Kolbotn, Nordre Follo, 1410
++47 973 92 263
+shviamjoshi@gmail.com
+LinkedIn Profile | GitHub Profile
+
+${formattedDate}
+${companyName}
+${contactPerson || ''}
+${companyAddress}
+${postalCity}
+
+${greeting}
+
+My name is Aaron Herman Lacerda, and I am a first-year student at Drømtorp High School, where I study Information Technology and Media Production. I am seeking an internship one day a week throughout the school year, where I can apply and further develop my skills in IT and media production in a professional environment. I am particularly interested in ${department}, and I believe my skills and enthusiasm can make a positive contribution to your team.
+
+Through my education, I have already gained a solid foundation in both technical and creative skills. I have experience with programming languages such as Python, Java, and web development using HTML, CSS, and JavaScript. On my GitHub profile, you can find several projects I have worked on, including a voice assistant in Python that integrates speech recognition and adaptable commands. Additionally, I have developed a website for learning and practicing math, which has given me experience in full-stack web development.
+
+I am also highly motivated to contribute practical skills such as problem-solving, teamwork, and communication. Previously, I held the role of class representative, which strengthened my ability to work in groups and lead small projects. Through voluntary work at the Kolbotn Code Club, I have also had the opportunity to share knowledge with others, which has been very rewarding.
+
+I see this internship as a valuable opportunity to learn and grow in ${department}, and I am eager to gain practical insights into the industry. I am flexible with working hours, and I believe my dedication and skills will be a great addition to your team.
+
+I hope for the opportunity to present myself further in an interview. Attached is my CV for additional information about my background and skills.
+
+Thank you in advance for considering my application. I look forward to hearing from you.
+
+Best regards,  
+Aaron Herman Lacerda
+`;
+        }
+
+        document.getElementById('applicationOutput').innerText = applicationText;
+    }
+
+    function copyApplication() {
+        const applicationText = document.getElementById('applicationOutput').innerText;
+        navigator.clipboard.writeText(applicationText).then(() => {
+            alert('Application copied to clipboard!');
+        });
+    }
+</script>
+</body>
+</html>
