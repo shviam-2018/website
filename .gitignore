@@ -63,7 +63,7 @@ node_modules/
 .yarn-integrity
 
 .github/workflows/
-.firebase.json
+firebase.json
 
 # dotenv environment variables file
 .env
