@@ -126,15 +126,45 @@
     display: grid;
     place-items: center;
     margin: 0 auto;
+    animation: fadeInUp 1.2s cubic-bezier(.23,1.01,.32,1) both;
   }
   
   .socialMediaLinks {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin: 32px 0;
   }
 
-  .socialMediaLinks a {
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #fff;
     color: #339DFF;
+    font-size: 2em;
+    box-shadow: 0 2px 8px rgba(51,157,255,0.10);
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
+    border: 2px solid #339DFF;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .social-icon.github { color: #222; border-color: #222; }
+  .social-icon.linkedin { color: #0077B5; border-color: #0077B5; }
+  .social-icon.instagram { color: #E1306C; border-color: #E1306C; }
+  .social-icon.email { color: #339DFF; border-color: #339DFF; }
+
+  .social-icon:hover, .social-icon:focus {
+    transform: scale(1.13) rotate(-4deg);
+    background: #339DFF;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(51,157,255,0.18);
+    border-color: #339DFF;
+    outline: none;
   }
 
   .form-container {
@@ -143,9 +173,10 @@
     margin: 2.5em auto;
     width: 100%;
     max-width: 600px;
-}
+    animation: fadeInUp 1.2s cubic-bezier(.23,1.01,.32,1) both;
+  }
 
-.form {
+  .form {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -153,24 +184,24 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f9f9f9;
-}
+  }
 
-.form label {
+  .form label {
     margin-bottom: 0.5em;
     font-weight: bold;
     color: #333;
-}
+  }
 
-.form .input {
+  .form .input {
     padding: 10px;
     margin-bottom: 1.5em;
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
-}
+  }
 
-.form .submit-button {
+  .form .submit-button {
     padding: 10px 20px;
     background-color: #339DFF;
     color: white;
@@ -179,10 +210,14 @@
     cursor: pointer;
     font-size: 1em;
     align-self: center;
-}
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+  }
 
   .form .submit-button:hover {
-      background-color: #339DFF;
+    transform: scale(1.07);
+    background: #fff;
+    color: #339DFF;
+    border: 1px solid #339DFF;
   }
   
   footer {
@@ -260,4 +295,9 @@
     .nav-links.active {
       display: flex;
     }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
   }

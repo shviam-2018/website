@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="style/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nightdev4l's portfolio</title>
@@ -39,10 +40,10 @@
       <h1>Contact me</h1>
       <p>Use any on the following platforms to contact me.</p>
       <div class="socialMediaLinks">
-        <a href="https://github.com/shviam-2018" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/aaronlacerda/" target="_blank">LinkedIn</a>
-        <a href="https://www.instagram.com/night.dev4l/" target="_blank">Instagram</a>
-        <a href="mailto:coder.develooper@gmail.com" target="_blank">Email</a>
+        <a class="social-icon github" href="https://github.com/shviam-2018" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a class="social-icon linkedin" href="https://linkedin.com/in/aaronlacerda/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a class="social-icon instagram" href="https://www.instagram.com/coder.aaron/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a class="social-icon email" href="mailto:coder.develooper@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </div>
@@ -50,7 +51,8 @@
 <!--form-->
 <div class="form-container">
   <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="form">
-      <input type="hidden" name="access_key" value="e679aadb-412f-4471-a16a-b47ca627fb5b">
+      <input type="hidden" name="access_key" id="access_key">
+      <input type="text" name="website" style="display:none">
       
       <label for="name">Name:</label>
       <input type="text" name="name" id="name" placeholder="Your name" class="input" required>
@@ -65,19 +67,7 @@
   </form>
 </div>
 
-<script>
-  // Auto-clear the form on submit
-  document.getElementById("contactForm").addEventListener("submit", function(event) {
-      setTimeout(function() {
-          document.getElementById("contactForm").reset();
-      }, 100); // Slight delay to allow form submission to process
-  });
-
-  // Auto-clear the form when leaving the page
-  window.addEventListener("beforeunload", function(event) {
-      document.getElementById("contactForm").reset();
-  });
-</script>
+<script src="script.js"></script>
 
   <!-- Footer -->
   <footer>
