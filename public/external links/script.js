@@ -33,3 +33,8 @@ window.addEventListener("beforeunload", function(event) {
     document.getElementById("contactForm").reset();
 });
   
+//project page
+// Add staggered animation delays to each project card
+document.querySelectorAll('.projects-wrapper .project-item').forEach((el, i) => {
+  el.style.setProperty('--project-index', i);
+});
