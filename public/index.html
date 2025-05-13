@@ -13,65 +13,66 @@
   <header class="header">
     <div class="container">
       <a class="logo-brand" href="/">
-        <img src="assets/images/NightDev4l-logos.jpeg" alt="raccoonPressLogo Logo" class="logo">
-        <tt class="brand-name">Nightdev4l</tt>
+        <img src="assets/images/NightDev4l-logos.jpeg" alt="Nightdev4l logo" class="logo">
+        <span class="brand-name">Nightdev4l</span>
       </a>
-      <nav class="nav">
-        <div class="nav-toggle" id="nav-toggle" onclick="toggleMenu()">
-          <!-- Hamburger icon -->
-          <span class="nav-icon"></span>
-          <span class="nav-icon"></span>
-          <span class="nav-icon"></span>
-        </div>
-        <div class="nav-links" id="nav-menu">
-          <a class="nav-link" href="/index.html">Home Page</a>
-          <a class="nav-link" href="/external links/about-me.html">About Me</a>
-          <a class="nav-link" href="/external links/contact.html">Contact Me</a> 
-          <a class="nav-link" href="/external links/projects.html">Projects</a>
-          <a class="nav-link" href="/external links/article.html">Articles</a>
-        </div>
+      <nav class="nav" aria-label="Main navigation">
+        <button class="nav-toggle" id="nav-toggle" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+          <span class="nav-icon" aria-hidden="true"></span>
+          <span class="nav-icon" aria-hidden="true"></span>
+          <span class="nav-icon" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-links" id="nav-menu" role="menubar">
+          <li role="none"><a role="menuitem" class="nav-link" href="/index.html">Home Page</a></li>
+          <li role="none"><a role="menuitem" class="nav-link" href="/external links/about-me.html">About Me</a></li>
+          <li role="none"><a role="menuitem" class="nav-link" href="/external links/contact.html">Contact Me</a></li>
+          <li role="none"><a role="menuitem" class="nav-link" href="/external links/projects.html">Projects</a></li>
+          <li role="none"><a role="menuitem" class="nav-link" href="/external links/article.html">Articles</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <!--main section-->
-  <section class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">Welcome to <span class="brand-animate">NightDev4l</span></h1>
-      <ul class="social-icons">
-        <li>
-          <a class="social-icon instagram" href="https://www.instagram.com/night.dev4l/" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </li>
-        <li>
-          <a class="social-icon linkedin" href="https://linkedin.com/in/aaronlacerda/" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </li>
-        <li>
-          <a class="social-icon github" href="https://github.com/shviam-2018" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
-      </ul>
-      <p class="hero-description">This is a space where I upload my projects and articles. It's also a great place to get to know me.</p>
-      <a href="#aboutme" class="hero-button">About me</a>
-    </div>
-  </section>
-
-  <!-- About me section -->
-  <section class="aboutme" id="aboutme">
-    <div class="main">
-      <img src="assets/images/profile picture.png" alt="Photo of the owner of this website" class="profile-picture">
-      <div class="aboutme-info">
-        <h1>About Me</h1>
-        <h5>Owner of <span class="brand-animate aboutme-brand">NightDev4l</span></h5>
-        <p>I am an aspiring backend developer with a passion for coding. Programming is not just a profession to me; it is a hobby, a source of inspiration, and a field I am eager to contribute to in the future. I invite you to explore my portfolio and gain insights into my projects, articles, and other work that reflects my dedication to the field of development generally.</p>
-        <a href="external links/about-me.html" class="homeab-btm">Learn more</a>
+  <main>
+    <!--main section-->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Welcome to <span class="brand-animate">NightDev4l</span></h1>
+        <ul class="social-icons">
+          <li>
+            <a class="social-icon instagram" href="https://www.instagram.com/night.dev4l/" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="social-icon linkedin" href="https://linkedin.com/in/aaronlacerda/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="social-icon github" href="https://github.com/shviam-2018" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+        <p class="hero-description">This is a space where I upload my projects and articles. It's also a great place to get to know me.</p>
+        <a href="#aboutme" class="hero-button">About me</a>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- About me section -->
+    <section class="aboutme" id="aboutme">
+      <div class="main">
+        <img src="assets/images/profile picture.png" alt="Photo of Aaron Lacerda, the owner of this website" class="profile-picture">
+        <div class="aboutme-info">
+          <h2>About Me</h2>
+          <h3>Owner of <span class="brand-animate aboutme-brand">NightDev4l</span></h3>
+          <p>I am an aspiring backend developer with a passion for coding. Programming is not just a profession to me; it is a hobby, a source of inspiration, and a field I am eager to contribute to in the future. I invite you to explore my portfolio and gain insights into my projects, articles, and other work that reflects my dedication to the field of development generally.</p>
+          <a href="external links/about-me.html" class="homeab-btm">Learn more about me</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
@@ -85,5 +86,5 @@
     </div>
   </footer>
 
-  </body>
+</body>
 </html>

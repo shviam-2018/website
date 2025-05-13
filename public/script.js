@@ -1,6 +1,8 @@
 function toggleMenu() {
     const menu = document.getElementById('nav-menu');
-    menu.classList.toggle('active'); 
+    const toggleButton = document.getElementById('nav-toggle');
+    const isActive = menu.classList.toggle('active');
+    toggleButton.setAttribute('aria-expanded', isActive ? 'true' : 'false');
 }
 
 // Animate about-me section and brand span on scroll
