@@ -4,42 +4,56 @@
   <link rel="stylesheet" href="style/article.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nightdev4l's portfolio</title>
-  <link rel="icon" href="/assets/images/NightDev4l-logos.jpeg" type="image/icon type" class="web-icon">
-  <script src="script.js"></script>
+  <title>Articles - Nightdev4l's Portfolio</title>
+  <meta name="description" content="Read the latest articles and blog posts by Aaron Lacerda (Nightdev4l) on programming, web development, and technology.">
+  <link rel="icon" href="/assets/images/NightDev4l-logos.jpeg" type="image/jpeg" class="web-icon">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="header">
     <div class="container">
-      <a class="logo-brand" href="/">
-        <img src="/assets/images/NightDev4l-logos.jpeg" alt="raccoonPressLogo Logo" class="logo">
-        <tt class="brand-name">Nightdev4l</tt>
+      <a class="logo-brand" href="/" aria-label="Nightdev4l - Return to homepage">
+        <img src="/assets/images/NightDev4l-logos.jpeg" alt="Nightdev4l logo" class="logo">
+        <span class="brand-name">Nightdev4l</span>
       </a>
-      <nav class="nav">
-        <div class="nav-toggle" id="nav-toggle" onclick="toggleMenu()">
-          <!-- Hamburger icon -->
-          <span class="nav-icon"></span>
-          <span class="nav-icon"></span>
-          <span class="nav-icon"></span>
-        </div>
-        <div class="nav-links" id="nav-menu">
-          <a class="nav-link" href="/index.html">Home Page</a>
-          <a class="nav-link" href="/external links/about-me.html">About Me</a>
-          <a class="nav-link" href="/external links/contact.html">Contact Me</a> 
-          <a class="nav-link" href="/external links/projects.html">Projects</a>
-          <a class="nav-link" href="/external links/article.html">Articles</a>
+      <nav class="nav" aria-label="Main navigation">
+        <button class="nav-toggle" id="nav-toggle" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+          <span class="nav-icon" aria-hidden="true"></span>
+          <span class="nav-icon" aria-hidden="true"></span>
+          <span class="nav-icon" aria-hidden="true"></span>
+        </button>
+        <div class="nav-links" id="nav-menu" role="menubar">
+          <a class="nav-link" href="/index.html" role="menuitem">Home Page</a>
+          <a class="nav-link" href="/external links/about-me.html" role="menuitem">About Me</a>
+          <a class="nav-link" href="/external links/contact.html" role="menuitem">Contact Me</a> 
+          <a class="nav-link" href="/external links/projects.html" role="menuitem">Projects</a>
+          <a class="nav-link" href="/external links/article.html" role="menuitem" aria-current="page">Articles</a>
         </div>
       </nav>
     </div>
   </header>
-  <!--main section-->
-  <h1 class="intro-title">article</h1>
-
-  <div class="article">
-    <a href="https://dev.to/nightdev/best-way-to-learn-a-programming-language-4223" target="_blank">
-      <img src="/assets/artical/bwtlapl.png" alt="img for article">
-    </a>
-  </div>
+  
+  <main>
+    <section class="article-section" aria-labelledby="article-heading">
+      <h1 id="article-heading" class="intro-title">Articles</h1>
+      
+      <div class="articles-container">
+        <article class="article-item">
+          <a href="https://dev.to/nightdev/best-way-to-learn-a-programming-language-4223" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             aria-label="Read article: Best Way to Learn a Programming Language">
+            <img src="/assets/artical/bwtlapl.png" 
+                 alt="Article cover image for 'Best Way to Learn a Programming Language'" 
+                 class="article-image">
+            <div class="article-overlay">
+              <span class="article-title" aria-hidden="true">Best Way to Learn a Programming Language</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
   
   <footer>
     <div class="footer-content">
