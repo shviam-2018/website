@@ -119,16 +119,33 @@ body {
   display: grid;
   place-items: center;
   margin: 5em auto;
+  padding: 0 20px;
+  max-width: 1200px;
 }
 
 .article img {
   height: 14em;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(51, 157, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(51, 157, 255, 0.15);
 }
 
 .intro-title {
   text-align: center;
-  margin: 3em;
+  margin: 3em auto;
   font-size: 2em;
+  color: #339DFF;
+  font-weight: 700;
+  letter-spacing: 1px;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
 footer {
