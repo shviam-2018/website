@@ -15,16 +15,26 @@ function toggleQA(contentId) {
 }
 
 // contact page
-// Auto-clear the form on submit
+// Obfuscate API key (not secure, but deters basic bots)
+document.getElementById('access_key').value = ['7b45b2b1-4836-4576-84cc-d186ae71a498'].join('');
+// Prevent submission if honeypot is filled
 document.getElementById("contactForm").addEventListener("submit", function(event) {
+  if (document.querySelector('input[name="website"]').value !== "") {
+    event.preventDefault();
+    return false;
+  }
   setTimeout(function() {
       document.getElementById("contactForm").reset();
-  }, 100); // Slight delay to allow form submission to process
+  }, 100);
 });
 
 // Auto-clear the form when leaving the page
 window.addEventListener("beforeunload", function(event) {
-  document.getElementById("contactForm").reset();
-}); 
+    document.getElementById("contactForm").reset();
+});
   
-  
+//project page
+// Add staggered animation delays to each project card
+document.querySelectorAll('.projects-wrapper .project-item').forEach((el, i) => {
+  el.style.setProperty('--project-index', i);
+});

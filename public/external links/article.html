@@ -4,42 +4,109 @@
   <link rel="stylesheet" href="style/article.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nightdev4l's portfolio</title>
-  <link rel="icon" href="/assets/images/NightDev4l-logos.jpeg" type="image/icon type" class="web-icon">
-  <script src="script.js"></script>
+  
+  <!-- SEO Meta Tags -->
+  <title>Articles by NightDev4l | Aaron Lacerda | ND4l | Programming Blog | Best Coder Drømtorp</title>
+  <meta name="description" content="Read programming articles and blog posts by Aaron Lacerda (NightDev4l, ND4l, shviam-2018) on web development, Python, JavaScript, and technology. Beste koder i drømtorp.">
+  <meta name="keywords" content="NightDev4l articles, Aaron Lacerda blog, ND4l, shviam-2018, programming articles, web development blog, Python tutorials, JavaScript guides, beste koder i drømtorp">
+  <meta name="author" content="Aaron Lacerda">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nightdev4l.web.app/external%20links/article.html">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Articles by NightDev4l | Aaron Lacerda - Programming Blog">
+  <meta property="og:description" content="Read programming articles and insights by Aaron Lacerda (NightDev4l, ND4l, shviam-2018) on web development, Python, JavaScript, and technology.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nightdev4l.web.app/external%20links/article.html">
+  <meta property="og:image" content="https://nightdev4l.web.app/assets/artical/bwtlapl.png">
+  <meta property="og:site_name" content="NightDev4l Portfolio">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Articles by NightDev4l | Aaron Lacerda - Programming Blog">
+  <meta name="twitter:description" content="Read programming articles by Aaron Lacerda (NightDev4l, ND4l, shviam-2018) - backend developer from Drømtorp sharing coding insights.">
+  <meta name="twitter:image" content="https://nightdev4l.web.app/assets/artical/bwtlapl.png">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#339DFF">
+  <link rel="icon" href="/assets/images/NightDev4l-logos.jpeg" type="image/jpeg">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "NightDev4l Programming Blog",
+    "description": "Programming articles and insights by Aaron Lacerda (NightDev4l)",
+    "author": {
+      "@type": "Person",
+      "name": "Aaron Lacerda",
+      "alternateName": ["NightDev4l", "Nightdev4l", "ND4l", "shviam-2018"],
+      "url": "https://nightdev4l.web.app"
+    },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Best Way to Learn a Programming Language",
+        "description": "A comprehensive guide on effective programming language learning strategies",
+        "author": {
+          "@type": "Person", 
+          "name": "Aaron Lacerda"
+        },
+        "url": "https://dev.to/nightdev/best-way-to-learn-a-programming-language-4223",
+        "image": "https://nightdev4l.web.app/assets/artical/bwtlapl.png"
+      }
+    ]
+  }
+  </script>
+  
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="header">
     <div class="container">
-      <a class="logo-brand" href="/">
-        <img src="/assets/images/NightDev4l-logos.jpeg" alt="raccoonPressLogo Logo" class="logo">
-        <tt class="brand-name">Nightdev4l</tt>
+      <a class="logo-brand" href="/" aria-label="Nightdev4l - Return to homepage">
+        <img src="/assets/images/NightDev4l-logos.jpeg" alt="Nightdev4l logo" class="logo">
+        <span class="brand-name">Nightdev4l</span>
       </a>
-      <nav class="nav">
-        <div class="nav-toggle" id="nav-toggle" onclick="toggleMenu()">
-          <!-- Hamburger icon -->
-          <span class="nav-icon"></span>
-          <span class="nav-icon"></span>
-          <span class="nav-icon"></span>
-        </div>
-        <div class="nav-links" id="nav-menu">
-          <a class="nav-link" href="/index.html">Home Page</a>
-          <a class="nav-link" href="/external links/about-me.html">About Me</a>
-          <a class="nav-link" href="/external links/contact.html">Contact Me</a> 
-          <a class="nav-link" href="/external links/projects.html">Projects</a>
-          <a class="nav-link" href="/external links/article.html">Articles</a>
+      <nav class="nav" aria-label="Main navigation">
+        <button class="nav-toggle" id="nav-toggle" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+          <span class="nav-icon" aria-hidden="true"></span>
+          <span class="nav-icon" aria-hidden="true"></span>
+          <span class="nav-icon" aria-hidden="true"></span>
+        </button>
+        <div class="nav-links" id="nav-menu" role="menubar">
+          <a class="nav-link" href="/index.html" role="menuitem">Home Page</a>
+          <a class="nav-link" href="/external links/about-me.html" role="menuitem">About Me</a>
+          <a class="nav-link" href="/external links/contact.html" role="menuitem">Contact Me</a> 
+          <a class="nav-link" href="/external links/projects.html" role="menuitem">Projects</a>
+          <a class="nav-link" href="/external links/article.html" role="menuitem" aria-current="page">Articles</a>
         </div>
       </nav>
     </div>
   </header>
-  <!--main section-->
-  <h1 class="intro-title">article</h1>
-
-  <div class="article">
-    <a href="https://dev.to/nightdev/best-way-to-learn-a-programming-language-4223" target="_blank">
-      <img src="/assets/artical/bwtlapl.png" alt="img for article">
-    </a>
-  </div>
+  
+  <main>
+    <section class="article-section" aria-labelledby="article-heading">
+      <h1 id="article-heading" class="intro-title">Articles</h1>
+      
+      <div class="articles-container">
+        <article class="article-item">
+          <a href="https://dev.to/nightdev/best-way-to-learn-a-programming-language-4223" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             aria-label="Read article: Best Way to Learn a Programming Language">
+            <img src="/assets/artical/bwtlapl.png" 
+                 alt="Article cover image for 'Best Way to Learn a Programming Language'" 
+                 class="article-image">
+            <div class="article-overlay">
+              <span class="article-title" aria-hidden="true">Best Way to Learn a Programming Language</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
   
   <footer>
     <div class="footer-content">
@@ -48,7 +115,7 @@
       <a href="contact.html" class="footer-button">Contact me</a>
     </div>
     <div class="footer-bottom">
-      &copy; NightDev4l / Aaron | All Rights Reserved | Designed by Aaron Lacerda | Website Content and Domain &copy; 2023 - 2024 nightdev4l
+      &copy; NightDev4l / Aaron | All Rights Reserved | Designed by Aaron Lacerda | Website Content and Domain &copy; 2023 - 2025 nightdev4l
     </div>
   </footer>
   </body>
