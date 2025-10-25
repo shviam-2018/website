@@ -62,11 +62,69 @@ node_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-.github/workflows/
-firebase.json
-
 # dotenv environment variables file
 .env
+
+# dotenv variants and environment files (may contain secrets)
+.env.*
+functions/.env
+functions/.env.*
+
+# Firebase project and runtime config (may include project IDs or secrets)
+.firebaserc
+.runtimeconfig.json
+functions/.runtimeconfig.json
+
+# Package manager config files that can store registry tokens
+.npmrc
+.yarnrc
+.yarnrc.yml
+.pnpmrc
+
+# Credentials, secrets and keys
+secrets/
+.secrets/
+credentials/
+.credentials/
+.ssh/
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+*.pem
+*.key
+*.p12
+*.pfx
+*.cer
+*.crt
+
+# Cloud provider local config (can contain auth tokens)
+.gcloud/
+.aws/
+.azure/
+.vercel/
+.docker/
+
+# Service account files
+serviceAccount*.json
+*service-account*.json
+*-sa.json
+*-secret*.json
+
+# Mobile platform configs that can embed API keys
+google-services.json
+GoogleService-Info.plist
+
+# Local databases / backups (may contain sensitive data)
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+*.backup
+
+# Editor settings that may store tokens in settings
+.vscode/settings.json
+.vscode/*.code-workspace
 
 # dataconnect generated files
 .dataconnect

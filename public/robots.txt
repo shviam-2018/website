@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Important pages for crawling
+Allow: /index.html
+Allow: /external%20links/about-me.html
+Allow: /external%20links/projects.html
+Allow: /external%20links/contact.html
+Allow: /external%20links/article.html
+
+# Sitemaps
+Sitemap: https://nightdev4l.web.app/sitemap.xml
+
+# Block unnecessary crawling of CSS and JS for performance
+User-agent: *
+Disallow: /assets/
+Allow: /assets/images/NightDev4l-logos.jpeg
+
+# Block search utility from indexing
+Disallow: /søk/

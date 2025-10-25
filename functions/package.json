@@ -1,0 +1,10 @@
+{
+  "name": "nightdev4l-maintenance-functions",
+  "private": true,
+  "main": "index.js",
+  "engines": { "node": "20" },
+  "type": "commonjs",
+  "dependencies": {
+    "firebase-functions": "^4.4.1"
+  }
+}

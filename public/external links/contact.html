@@ -2,10 +2,58 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="style/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nightdev4l's portfolio</title>
-  <link rel="icon" href="/assets/images/NightDev4l-logos.jpeg" type="image/icon type" class="web-icon">
+  
+  <!-- SEO Meta Tags -->
+  <title>Contact NightDev4l | Aaron Lacerda | ND4l | Backend Developer Drømtorp</title>
+  <meta name="description" content="Contact Aaron Lacerda (NightDev4l, ND4l, shviam-2018) - Backend developer from Drømtorp. Available for projects, collaborations, and freelance work.">
+  <meta name="keywords" content="contact NightDev4l, Aaron Lacerda contact, ND4l, shviam-2018, backend developer hire, freelance developer Drømtorp, beste koder i drømtorp">
+  <meta name="author" content="Aaron Lacerda">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nightdev4l.web.app/external%20links/contact.html">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Contact NightDev4l | Aaron Lacerda - Backend Developer">
+  <meta property="og:description" content="Get in touch with Aaron Lacerda (NightDev4l, ND4l, shviam-2018) - Backend developer from Drømtorp available for projects and collaborations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nightdev4l.web.app/external%20links/contact.html">
+  <meta property="og:image" content="https://nightdev4l.web.app/assets/images/NightDev4l-logos.jpeg">
+  <meta property="og:site_name" content="NightDev4l Portfolio">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact NightDev4l | Aaron Lacerda - Backend Developer">
+  <meta name="twitter:description" content="Contact Aaron Lacerda (NightDev4l, ND4l, shviam-2018) - Backend developer from Drømtorp for projects and collaborations.">
+  <meta name="twitter:image" content="https://nightdev4l.web.app/assets/images/NightDev4l-logos.jpeg">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#339DFF">
+  <link rel="icon" href="/assets/images/NightDev4l-logos.jpeg" type="image/jpeg">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact NightDev4l",
+    "description": "Contact Aaron Lacerda (NightDev4l) for backend development projects",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Aaron Lacerda",
+      "alternateName": ["NightDev4l", "Nightdev4l", "ND4l", "shviam-2018"],
+      "email": "coder.develooper@gmail.com",
+      "url": "https://nightdev4l.web.app",
+      "sameAs": [
+        "https://github.com/shviam-2018",
+        "https://linkedin.com/in/aaronlacerda/",
+        "https://www.instagram.com/coder.aaron/"
+      ]
+    }
+  }
+  </script>
+  
   <script src="script.js"></script>
 </head>
 <body>
@@ -39,10 +87,10 @@
       <h1>Contact me</h1>
       <p>Use any on the following platforms to contact me.</p>
       <div class="socialMediaLinks">
-        <a href="https://github.com/shviam-2018" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/aaronlacerda/" target="_blank">LinkedIn</a>
-        <a href="https://www.instagram.com/night.dev4l/" target="_blank">Instagram</a>
-        <a href="mailto:coder.develooper@gmail.com" target="_blank">Email</a>
+        <a class="social-icon github" href="https://github.com/shviam-2018" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a class="social-icon linkedin" href="https://linkedin.com/in/aaronlacerda/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a class="social-icon instagram" href="https://www.instagram.com/coder.aaron/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a class="social-icon email" href="mailto:coder.develooper@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </div>
@@ -50,7 +98,8 @@
 <!--form-->
 <div class="form-container">
   <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="form">
-      <input type="hidden" name="access_key" value="e679aadb-412f-4471-a16a-b47ca627fb5b">
+      <input type="hidden" name="access_key" id="access_key">
+      <input type="text" name="website" style="display:none">
       
       <label for="name">Name:</label>
       <input type="text" name="name" id="name" placeholder="Your name" class="input" required>
@@ -65,19 +114,7 @@
   </form>
 </div>
 
-<script>
-  // Auto-clear the form on submit
-  document.getElementById("contactForm").addEventListener("submit", function(event) {
-      setTimeout(function() {
-          document.getElementById("contactForm").reset();
-      }, 100); // Slight delay to allow form submission to process
-  });
-
-  // Auto-clear the form when leaving the page
-  window.addEventListener("beforeunload", function(event) {
-      document.getElementById("contactForm").reset();
-  });
-</script>
+<script src="script.js"></script>
 
   <!-- Footer -->
   <footer>
@@ -87,7 +124,7 @@
       <a href="contact.html" class="footer-button">Contact me</a>
     </div>
     <div class="footer-bottom">
-      &copy; NightDev4l / Aaron | All Rights Reserved | Designed by Aaron Lacerda | Website Content and Domain &copy; 2023 - 2024 nightdev4l
+      &copy; NightDev4l / Aaron | All Rights Reserved | Designed by Aaron Lacerda | Website Content and Domain &copy; 2023 - 2025 nightdev4l
     </div>
   </footer>
 </body>
