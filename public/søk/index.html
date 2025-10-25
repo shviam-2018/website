@@ -94,17 +94,19 @@
         const companyAddress = document.getElementById('companyAddress').value;
         const postalCity = document.getElementById('postalCity').value;
         const department = document.getElementById('department').value;
+        const LinkedInProfile = "https://www.linkedin.com/in/aaronlacerda/";
+        const GitHubProfile = "https://github.com/shviam-2018";
 
         let applicationText;
 
-        if (language === 'norsk') {
-            const greeting = contactPerson ? `Kjære ${contactPerson},` : 'Kjære til den det måtte gjelde,';
-            applicationText = `
+if (language === 'norsk') {
+        const greeting = contactPerson ? `Til ${contactPerson},` : `Til ${companyName},`;
+    applicationText = `
 Aaron Herman Lacerda
 Kolbotn, Nordre Follo, 1410
 +47 973 92 263
 shviamjoshi@gmail.com
-LinkedIn Profile | GitHub Profile
+LinkedIn ${LinkedInProfile} | GitHub ${GitHubProfile}
 
 ${formattedDate}
 ${companyName}
@@ -114,24 +116,22 @@ ${postalCity}
 
 ${greeting}
 
-Jeg heter Aaron Herman Lacerda, og jeg er en førsteårselev ved Drømtorp videregående skole, hvor jeg studerer Informasjonsteknologi og Medieproduksjon. Jeg er på utkikk etter en praksisplass én dag i uken gjennom skoleåret, hvor jeg kan anvende og videreutvikle mine ferdigheter innen IT og medieproduksjon i et profesjonelt miljø. Jeg er spesielt interessert i ${department}, og tror mine ferdigheter og entusiasme kan bidra positivt hos dere.
+Jeg heter Aaron Herman Lacerda og går VG2 IT-utvikling ved Drømtorp videregående skole. Som en del av faget Yrkesfaglig fordypning (YFF) søker jeg en praksisplass hos dere. Praksisperiodene er lagt til høsten 2025 (uke 42-46, tirsdag-torsdag) og våren 2026 (uke 11-16, tirsdag-torsdag, med påskeferie i uke 14).
 
-Gjennom min utdanning har jeg allerede fått et solid fundament i både tekniske og kreative ferdigheter. Jeg har erfaring med programmeringsspråk som Python, Java, samt webutvikling med HTML, CSS, og JavaScript. På min GitHub-profil kan dere finne flere prosjekter jeg har jobbet med, inkludert en stemmeassistent i Python som integrerer talegjenkjenning og tilpasningsdyktige kommandoer. I tillegg har jeg utviklet en nettside for å lære og øve på matte, noe som har gitt meg erfaring i full-stack webutvikling.
+Jeg er spesielt interessert i ${department}, med fokus på backend-utvikling, databaser, automasjon og IT-sikkerhet, men jeg bidrar gjerne bredt der det trengs. Jeg har erfaring med Python, JavaScript, React, Node.js og databaser, og flere av mine prosjekter kan ses på min portfolio (nightdev4l.web.app) og GitHub (github.com/shviam-2018).
 
-Jeg er også svært motivert for å bidra med praktiske ferdigheter som problemløsning, teamarbeid og kommunikasjon. Jeg har tidligere hatt rollen som klasserepresentant, noe som har styrket mine evner til å jobbe i grupper og lede små prosjekter. Gjennom frivillig arbeid ved Kodeklubben Kolbotn har jeg også fått muligheten til å dele kunnskap med andre, noe som har vært svært givende.
+Gjennom prosjekter som webapper, Discord-bots, fullstack-nettsider og små spill har jeg fått god erfaring med å utvikle robuste løsninger. Jeg er også motivert for å bidra med praktiske ferdigheter som problemløsning, samarbeid og kommunikasjon. Tidligere erfaring som klasserepresentant og frivillig i Kodeklubben Kolbotn har styrket mine evner til samarbeid og kunnskapsdeling.
 
-Jeg ser på praksisplassen som en verdifull mulighet til å lære og vokse innen ${department}, og jeg er ivrig etter å få en praktisk innsikt i bransjen. Jeg er fleksibel med arbeidstider, og jeg tror mitt engasjement og mine ferdigheter vil være et godt tillegg til teamet deres.
+Jeg ser på praksisplassen som en verdifull mulighet til å lære mer om hvordan en profesjonell IT-avdeling arbeider, og til å bidra med mine ferdigheter. Jeg håper å kunne presentere meg nærmere i et intervju. CV er vedlagt.
 
-Jeg håper å få muligheten til å presentere meg selv nærmere i et intervju. Vedlagt følger min CV for ytterligere informasjon om min bakgrunn og kompetanse.
-
-På forhånd takk for at dere tar dere tid til å vurdere min søknad. Jeg ser frem til å høre fra dere.
+Tusen takk for at dere vurderer min søknad. Jeg ser frem til å høre fra dere.
 
 Med vennlig hilsen,
 Aaron Herman Lacerda
 `;
-        } else if (language === 'english') {
-            const greeting = contactPerson ? `Dear ${contactPerson},` : 'Dear Sir/Madam,';
-            applicationText = `
+} else if (language === 'english') {
+    const greeting = contactPerson ? `Dear ${contactPerson},` : 'Dear Sir/Madam,';
+    applicationText = `
 Aaron Herman Lacerda
 Kolbotn, Nordre Follo, 1410
 +47 973 92 263
@@ -146,22 +146,21 @@ ${postalCity}
 
 ${greeting}
 
-My name is Aaron Herman Lacerda, and I am a first-year student at Drømtorp High School, where I study Information Technology and Media Production. I am seeking an internship one day a week throughout the school year, where I can apply and further develop my skills in IT and media production in a professional environment. I am particularly interested in ${department}, and I believe my skills and enthusiasm can make a positive contribution to your team.
+My name is Aaron Herman Lacerda, and I am currently a second-year student (VG2 IT Development) at Drømtorp High School. As part of the subject "Vocational Specialization" (YFF), I am applying for an internship with your company. The internship periods are scheduled for autumn 2025 (weeks 42-46, Tuesday-Thursday) and spring 2026 (weeks 11-16, Tuesday-Thursday, except Easter week 14).
 
-Through my education, I have already gained a solid foundation in both technical and creative skills. I have experience with programming languages such as Python, Java, and web development using HTML, CSS, and JavaScript. On my GitHub profile, you can find several projects I have worked on, including a voice assistant in Python that integrates speech recognition and adaptable commands. Additionally, I have developed a website for learning and practicing math, which has given me experience in full-stack web development.
+I am particularly interested in ${department}, with a focus on backend development, databases, automation, and IT security, but I am flexible and eager to contribute across the stack. I have experience with Python, JavaScript, React, Node.js, and databases, and you can see my work on my portfolio (nightdev4l.web.app) and GitHub (github.com/shviam-2018).
 
-I am also highly motivated to contribute practical skills such as problem-solving, teamwork, and communication. Previously, I held the role of class representative, which strengthened my ability to work in groups and lead small projects. Through voluntary work at the Kolbotn Code Club, I have also had the opportunity to share knowledge with others, which has been very rewarding.
+Through projects such as web applications, Discord bots, full-stack websites, and small games, I have gained solid experience in building reliable solutions. I am also motivated to contribute with practical skills such as problem-solving, teamwork, and communication. My past roles as a class representative and as a volunteer at Kolbotn Code Club have strengthened my collaboration and knowledge-sharing skills.
 
-I see this internship as a valuable opportunity to learn and grow in ${department}, and I am eager to gain practical insights into the industry. I am flexible with working hours, and I believe my dedication and skills will be a great addition to your team.
+I see this internship as a valuable opportunity to gain practical insight into how a professional IT department operates, while contributing my own skills. I would be happy to present myself further in an interview. Please find my CV attached.
 
-I hope for the opportunity to present myself further in an interview. Attached is my CV for additional information about my background and skills.
+Thank you very much for considering my application. I look forward to hearing from you.
 
-Thank you in advance for considering my application. I look forward to hearing from you.
-
-Best regards,  
+Best regards,
 Aaron Herman Lacerda
 `;
-        }
+}
+
 
         document.getElementById('applicationOutput').innerText = applicationText;
     }
@@ -173,5 +172,32 @@ Aaron Herman Lacerda
         });
     }
 </script>
+<script>
+    // Maintenance overlay for this page
+    (function(){
+        const MAINTENANCE_ENABLED = true; // set to false to disable
+        function injectStyles(){
+            if(document.getElementById('maintenance-overlay-style')) return;
+            const s=document.createElement('style'); s.id='maintenance-overlay-style';
+            s.textContent = `#maintenance-overlay{position:fixed;inset:0;background:#0b0b0b;color:#f5f5f5;z-index:2147483647;display:flex;align-items:center;justify-content:center;padding:24px;}#maintenance-overlay .content{max-width:720px;text-align:center;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif}#maintenance-overlay h1{font-size:clamp(22px,4vw,36px);margin:0 0 8px;font-weight:700}#maintenance-overlay p{font-size:clamp(14px,2.2vw,18px);opacity:.9;margin:0 0 20px;line-height:1.6}#maintenance-overlay .cta{display:inline-flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:center}#maintenance-overlay button{background:#ffffff;color:#0b0b0b;border:0;border-radius:8px;padding:10px 16px;font-weight:600;cursor:pointer}#maintenance-overlay .subtle{opacity:.7;font-size:12px;margin-top:8px}`;
+            document.head.appendChild(s);
+        }
+        function show(){
+            if(document.getElementById('maintenance-overlay')) return;
+            injectStyles();
+            const root=document.createElement('div');
+            root.id='maintenance-overlay';
+            root.setAttribute('role','dialog');
+            root.setAttribute('aria-live','polite');
+            root.innerHTML = '<div class="content"><h1>We’ll be back soon</h1><p>We’re performing maintenance and upgrading the site. All pages and links remain intact; please check back shortly.</p><div class="cta"><button type="button" id="maintenance-retry">Refresh</button></div><div class="subtle">Prefer HTTP 503 with Retry-After if your host supports it.</div></div>';
+            document.body.appendChild(root);
+            const html=document.documentElement; html.style.overflow='hidden';
+            const btn=document.getElementById('maintenance-retry'); if(btn) btn.addEventListener('click',()=>location.reload());
+        }
+        if(MAINTENANCE_ENABLED){
+            if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', show, {once:true}); else show();
+        }
+    })();
+ </script>
 </body>
 </html>

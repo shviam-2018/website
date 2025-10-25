@@ -1,5 +1,21 @@
 {
   "projects": {
     "default": "nightdev4l"
-  }
+  },
+  "targets": {
+    "nightdev4l": {
+      "hosting": {
+        "live": [
+          "nightdev4l"
+        ],
+        "maintenance": [
+          "nightdev4l"
+        ],
+        "testing": [
+          "nightdev4l-maint"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

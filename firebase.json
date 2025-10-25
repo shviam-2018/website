@@ -1,22 +1,77 @@
 {
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "headers": [
-      {
-        "source": "**",
-        "headers": [
-          { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-          { "key": "X-Content-Type-Options", "value": "nosniff" },
-          { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self'; object-src 'none'" },
-          { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-          { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" }
-        ]
-      }
-    ]
-  }
+  "functions": {
+    "runtime": "nodejs20",
+    "source": "functions"
+  },
+  "hosting": [
+    {
+      "target": "live",
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "headers": [
+        {
+          "source": "**",
+          "headers": [
+            { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+            { "key": "X-Content-Type-Options", "value": "nosniff" },
+            { "key": "Content-Security-Policy", "value": "default-src 'self'; style-src 'self' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; script-src 'self'; object-src 'none'" },
+            { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+            { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "maintenance",
+      "public": "public-maintenance",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "headers": [
+        {
+          "source": "**",
+          "headers": [
+            { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+            { "key": "X-Content-Type-Options", "value": "nosniff" },
+            { "key": "Content-Security-Policy", "value": "default-src 'self'; style-src 'self' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; script-src 'self'; object-src 'none'" },
+            { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+            { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" },
+            { "key": "Cache-Control", "value": "no-store" }
+          ]
+        }
+      ],
+      "rewrites": [
+        { "source": "/robots.txt", "destination": "/robots.txt" },
+        { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+        { "source": "**", "function": { "functionId": "maintenance503", "region": "us-central1" } }
+      ]
+    },
+    {
+      "target": "testing",
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "headers": [
+        {
+          "source": "**",
+          "headers": [
+            { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+            { "key": "X-Content-Type-Options", "value": "nosniff" },
+            { "key": "Content-Security-Policy", "value": "default-src 'self'; style-src 'self' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; script-src 'self'; object-src 'none'" },
+            { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+            { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" }
+          ]
+        }
+      ]
+    }
+  ]
 }
